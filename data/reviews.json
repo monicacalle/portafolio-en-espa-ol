@@ -1,39 +1,39 @@
 [
   {
-    "name": "Tomas",
-    "position": "Front end lead at Paktolus",
+    "name": "Tomás",
+    "position": "Líder de Front-End en Paktolus",
     "image": "assets/images/tomas.webp",
-    "description": "Monica is an extremely hardworking and dedicated person. I had the pleasure of working with her, and it was truly a great experience. She's excellent at teamwork, both giving and receiving feedback. She's always willing to learn and to share what she knows."
+    "description": "Mónica es una persona extremadamente trabajadora y dedicada. Tuve el placer de trabajar con ella y fue una gran experiencia. Destaca por su capacidad de trabajo en equipo, tanto al dar como al recibir feedback. Siempre está dispuesta a aprender y a compartir lo que sabe."
   },
   {
-    "name": "Matias",
-    "position": "Full stack developer",
+    "name": "Matías",
+    "position": "Desarrollador Full Stack",
     "image": "assets/images/matias.webp",
-    "description": "I worked with Mónica on Enerlink’s team. I’d like to highlight her proactiveness in team collaboration, her clear communication skills, and her technical abilities. It was a pleasure to be on the same team with Mónica."
+    "description": "Trabajé con Mónica en el equipo de Enerlink. Me gustaría destacar su proactividad en la colaboración, su comunicación clara y sus habilidades técnicas. Fue un placer compartir equipo con ella."
   },
   {
     "name": "Giannina",
-    "position": "Corporate Relations Coordinator",
+    "position": "Coordinadora de Relaciones Corporativas",
     "image": "/assets/images/geanina.webp",
-    "description": "Mónica supervised my studies at 4Geeks Academy, always available to answer questions and creating a sense of trust with her empathetic attitude. She is dedicated and persevering."
+    "description": "Mónica supervisó mis estudios en 4Geeks Academy. Siempre estuvo disponible para responder preguntas y generar confianza gracias a su actitud empática. Es una persona dedicada y perseverante."
   },
   {
     "name": "Ricardo",
-    "position": "Full stack developer",
+    "position": "Desarrollador Full Stack",
     "image": "assets/images/ricardo.webp", 
-    "description": "I met Mónica during the FullStack Developer certification at 4Geeks Academy, where she was the teacher's assistant. Her constant project reviews, advice, and support were among the best I received throughout the process."
+    "description": "Conocí a Mónica durante la certificación de Full Stack Developer en 4Geeks Academy, donde era asistente de docencia. Sus revisiones constantes de proyectos, sus consejos y su apoyo fueron de lo mejor que recibí durante todo el proceso."
   },
   {
     "name": "Julio",
-    "position": "Full stack developer",
+    "position": "Desarrollador Full Stack",
     "image": "assets/images/julio.webp",
-    "description": "Mónica is always so resourceful, proactive, and committed to delivering excellent work. I really enjoyed the experience of working with you, Mónica. Thank you for always supporting the continuous improvement of our course project."
+    "description": "Mónica siempre ha sido muy resolutiva, proactiva y comprometida con entregar un trabajo excelente. Disfruté mucho la experiencia de trabajar contigo, Mónica. Gracias por apoyar siempre la mejora continua de nuestro proyecto del curso."
   },
   {
-    "name": "Nicolas",
-    "position": "Full stack developer",
+    "name": "Nicolás",
+    "position": "Desarrollador Full Stack",
     "image": "assets/images/nicolas.webp",
-    "description": "Mónica is an excellent person to work with, always willing to help and share her knowledge with others. We worked together on a project, and there was always great communication."
+    "description": "Mónica es una excelente persona con quien trabajar, siempre dispuesta a ayudar y a compartir su conocimiento con los demás. Trabajamos juntos en un proyecto y siempre hubo muy buena comunicación."
   }
  
 ]
