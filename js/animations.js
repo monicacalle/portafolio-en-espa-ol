@@ -25,7 +25,11 @@ function applyMotionTargets(root = document) {
     const rules = [
         { selector: '.header', type: 'fade-down' },
         { selector: '.home__hero-image', type: 'zoom-soft' },
-        { selector: '.about__title, .skills__title, .curriculum__title, .projects__title, .reviews__title, .contact__title', type: 'fade-up' },
+        {
+            selector:
+                '.about__title, .skills__title, .curriculum__title, .curriculum__col-title, .projects__title, .projects__category-title, .reviews__title, .contact__title, .footer__title',
+            type: 'fade-up'
+        },
         { selector: '.about__img-container', type: 'fade-right' },
         { selector: '.about__content, .contact__intro, .contact__form, .footer__wrapper', type: 'fade-left' },
         { selector: '.skills__card, .curriculum__item, .project-card, .carousel__card-inner, .footer__social-link', type: 'fade-up', stagger: 90 },
