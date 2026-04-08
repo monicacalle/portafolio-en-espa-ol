@@ -10,24 +10,21 @@
 }
 
 .carousel {
-  overflow: hidden;
+  overflow: visible;
   width: 100%;
   position: relative;
 }
 
 .carousel__track {
-  display: flex;
-  transition: transform 0.5s ease;
-  will-change: transform;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
 }
 
 .carousel__card {
-  flex: 0 0 100%;
   box-sizing: border-box;
-  padding: 1rem;
   display: flex;
   justify-content: center;
-  min-width: 100%;
 }
 
 .carousel__card-inner {
@@ -100,10 +97,27 @@
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
+.carousel.is-enhanced {
+  overflow: hidden;
+}
+
+.carousel.is-enhanced .carousel__track {
+  display: flex;
+  gap: 0;
+  transition: transform 0.5s ease;
+  will-change: transform;
+}
+
+.carousel.is-enhanced .carousel__card {
+  flex: 0 0 100%;
+  min-width: 100%;
+  padding: 1rem;
+}
+
 /* Media Queries */
 /* tablets */
 @media (min-width: 600px) {
-  .carousel__card {
+  .carousel.is-enhanced .carousel__card {
     flex: 0 0 50%;
     min-width: 50%;
   }
@@ -115,7 +129,7 @@
 
 /* mobile */
 @media (min-width: 1024px) {
-  .carousel__card {
+  .carousel.is-enhanced .carousel__card {
     flex: 0 0 33.3333%;
     min-width: 33.3333%;
   }

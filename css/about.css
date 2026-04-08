@@ -44,7 +44,7 @@
 }
 
 .about__description {
-  font-size: var(--text-siz e);
+  font-size: var(--text-size);
   line-height: 1.8;
   text-align: justify;
 }

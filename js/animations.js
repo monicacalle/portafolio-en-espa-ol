@@ -3,7 +3,6 @@
 const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 
 let observer;
-let motionObserver;
 let initialized = false;
 
 function revealImmediately(element) {
@@ -74,23 +73,6 @@ function initMotionSystem() {
         );
     }
 
-    if (!motionObserver) {
-        motionObserver = new MutationObserver((mutations) => {
-            mutations.forEach((mutation) => {
-                mutation.addedNodes.forEach((node) => {
-                    if (!(node instanceof HTMLElement)) return;
-
-                    applyMotionTargets(node);
-                });
-            });
-        });
-
-        motionObserver.observe(document.body, {
-            childList: true,
-            subtree: true
-        });
-    }
-
     applyMotionTargets(document);
     startFloatingAccents();
 }
@@ -106,7 +88,11 @@ function initializeSiteAnimations() {
     initMotionSystem();
 }
 
-document.addEventListener('sections:loaded', initializeSiteAnimations);
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initializeSiteAnimations, { once: true });
+} else {
+    initializeSiteAnimations();
+}
 
 prefersReducedMotion.addEventListener('change', () => {
     if (prefersReducedMotion.matches) {

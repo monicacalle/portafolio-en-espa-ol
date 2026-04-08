@@ -2,61 +2,79 @@
 
 const menuIcon = document.querySelector('.menu__icon');
 const navbar = document.querySelector('.navbar');
-const sections = document.querySelectorAll('section');
-const navLinks = document.querySelectorAll('.navbar__link');
+const sections = [...document.querySelectorAll('main section[id]')];
+const navLinks = [...document.querySelectorAll('.navbar__link')];
 const desktopBreakpoint = window.matchMedia('(min-width: 769px)');
 
-const closeMenu = () => {
-    navbar.classList.remove('isActive');
-    menuIcon.setAttribute('aria-expanded', 'false');
-};
+if (!menuIcon || !navbar || navLinks.length === 0) {
+    console.warn('Encabezado no inicializado: faltan elementos clave en el DOM.');
+} else {
+    const closeMenu = () => {
+        navbar.classList.remove('isActive');
+        menuIcon.setAttribute('aria-expanded', 'false');
+    };
 
-// Add active class to nav links based on scroll position
-window.addEventListener('scroll', () => {
-    sections.forEach((sec) => {
-        const top = window.scrollY;
-        const offSet = sec.offsetTop - 150;
-        const height = sec.offsetHeight;
-        const id = sec.getAttribute('id');
+    function setActiveLink(id) {
+        navLinks.forEach((link) => {
+            link.classList.toggle('isActive', link.getAttribute('href') === `#${id}`);
+        });
+    }
 
-        if (top >= offSet && top < offSet + height) {
-            navLinks.forEach((link) => {
-                link.classList.remove('isActive');
+    if ('IntersectionObserver' in window && sections.length > 0) {
+        const visibleSections = new Map();
 
-                // Add active class only to the current section's nav link
-                if (link.getAttribute('href').includes(id)) {
-                    link.classList.add('isActive');
+        const sectionObserver = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        visibleSections.set(entry.target.id, entry.intersectionRatio);
+                    } else {
+                        visibleSections.delete(entry.target.id);
+                    }
+                });
+
+                const [currentSection] = [...visibleSections.entries()].sort((a, b) => b[1] - a[1]);
+
+                if (currentSection) {
+                    setActiveLink(currentSection[0]);
                 }
-            });
+            },
+            {
+                rootMargin: '-30% 0px -45% 0px',
+                threshold: [0.2, 0.45, 0.7]
+            }
+        );
+
+        sections.forEach((section) => sectionObserver.observe(section));
+    }
+
+    navLinks.forEach((link) => {
+        link.addEventListener('click', () => {
+            const targetId = link.getAttribute('href')?.replace('#', '');
+            if (targetId) {
+                setActiveLink(targetId);
+            }
+
+            closeMenu();
+        });
+    });
+
+    menuIcon.addEventListener('click', () => {
+        navbar.classList.toggle('isActive');
+        menuIcon.setAttribute('aria-expanded', navbar.classList.contains('isActive') ? 'true' : 'false');
+    });
+
+    desktopBreakpoint.addEventListener('change', (event) => {
+        if (event.matches) {
+            closeMenu();
         }
     });
-});
 
-// Highlight nav link on click
-navLinks.forEach((link) => {
-    link.addEventListener('click', () => {
-        navLinks.forEach((l) => l.classList.remove('isActive'));
-        link.classList.add('isActive');
-        closeMenu();
+    document.addEventListener('click', (event) => {
+        if (!navbar.classList.contains('isActive')) return;
+
+        if (!navbar.contains(event.target) && !menuIcon.contains(event.target)) {
+            closeMenu();
+        }
     });
-});
-
-// Toggle navbar visibility (for mobile menu)
-menuIcon.addEventListener('click', () => {
-    navbar.classList.toggle('isActive');
-    menuIcon.setAttribute('aria-expanded', navbar.classList.contains('isActive') ? 'true' : 'false');
-});
-
-desktopBreakpoint.addEventListener('change', (event) => {
-    if (event.matches) {
-        closeMenu();
-    }
-});
-
-document.addEventListener('click', (event) => {
-    if (!navbar.classList.contains('isActive')) return;
-
-    if (!navbar.contains(event.target) && !menuIcon.contains(event.target)) {
-        closeMenu();
-    }
-});
+}
