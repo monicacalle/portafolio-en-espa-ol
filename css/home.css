@@ -8,7 +8,7 @@
 
 .home__wrapper {
   width: 100%;
-  max-width: 480px;
+  max-width: min(480px, 100%);
   margin: 0 auto;
   text-align: center;
   color: var(--third);
@@ -19,13 +19,14 @@
   width: 100%;
   max-width: 100%;
   margin: 0 auto;
+  overflow: hidden;
 }
 
 .home__hero-image {
   display: block;
-  width: calc(100% - 28px);
-  max-width: calc(100% - 28px);
-  margin: 0 0 0 28px;
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
   object-fit: contain;
   object-position: center center;
   transform: none;
