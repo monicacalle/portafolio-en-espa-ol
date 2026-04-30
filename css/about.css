@@ -186,6 +186,10 @@
     padding-bottom: 4.5rem;
   }
 
+  .about__intro {
+    text-align: center;
+  }
+
   .about__title {
     font-size: clamp(3.2rem, 18vw, 5.2rem);
     line-height: 0.88;
