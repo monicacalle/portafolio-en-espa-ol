@@ -168,9 +168,34 @@
   }
 }
 
-@media (max-width: 640px) {
+@media (max-width: 768px) {
   .footer__wrapper {
     padding-top: 2.5rem;
+  }
+
+  .footer__top,
+  .footer__bottom {
+    text-align: center;
+  }
+
+  .footer__brand,
+  .footer__col {
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer__logo {
+    margin-inline: auto;
+  }
+
+  .footer__text {
+    max-width: 30ch;
+    margin-inline: auto;
+  }
+
+  .footer__social-icons,
+  .footer__legal {
+    justify-content: center;
   }
 
   .footer__nav {

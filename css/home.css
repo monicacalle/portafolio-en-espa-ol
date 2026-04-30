@@ -330,23 +330,26 @@
   }
 
   .home__media {
-    width: min(92vw, 420px);
+    width: min(94vw, 420px);
   }
 
   .home__title {
-    padding-inline: 0.85rem;
+    z-index: 3;
+    align-items: flex-end;
+    justify-content: center;
+    padding-inline: 0.4rem;
     padding-bottom: 1rem;
   }
 
   .home__title-word {
-    font-size: clamp(3.2rem, 15vw, 5.4rem);
+    font-size: clamp(3.35rem, 16vw, 5.8rem);
   }
 
   .home__title-word--left {
-    margin-right: clamp(0.25rem, 10vw, 4.5rem);
+    margin-right: -0.05em;
   }
 
   .home__title-word--right {
-    margin-left: clamp(0.25rem, 10vw, 4.5rem);
+    margin-left: -0.05em;
   }
 }
