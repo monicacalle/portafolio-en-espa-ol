@@ -4,6 +4,7 @@ const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)
 
 let observer;
 let initialized = false;
+let heroParallaxBound = false;
 
 function revealImmediately(element) {
     element.classList.add('is-visible');
@@ -23,11 +24,10 @@ function bindReveal(element) {
 
 function applyMotionTargets(root = document) {
     const rules = [
-        { selector: '.header', type: 'fade-down' },
         { selector: '.home__hero-image', type: 'zoom-soft' },
         {
             selector:
-                '.about__title, .skills__title, .curriculum__title, .curriculum__col-title, .projects__title, .projects__category-title, .reviews__title, .contact__title, .footer__title',
+                '.home__title, .about__title, .skills__title, .curriculum__title, .curriculum__col-title, .projects__title, .projects__category-title, .reviews__title, .contact__title, .footer__title',
             type: 'fade-up'
         },
         { selector: '.about__img-container', type: 'fade-right' },
@@ -59,6 +59,41 @@ function startFloatingAccents() {
     });
 }
 
+function initializeHeroParallax() {
+    if (heroParallaxBound || prefersReducedMotion.matches) return;
+
+    const hero = document.querySelector('.home');
+    const heroMedia = document.querySelector('.home__media');
+
+    if (!hero || !heroMedia) return;
+
+    heroParallaxBound = true;
+
+    let ticking = false;
+
+    const updateParallax = () => {
+        const rect = hero.getBoundingClientRect();
+        const viewportHeight = window.innerHeight || document.documentElement.clientHeight;
+
+        // Move only while hero is near the viewport for a subtle editorial parallax.
+        const progress = Math.max(-1, Math.min(1, (viewportHeight - rect.top) / (viewportHeight + rect.height)));
+        const offset = (progress - 0.5) * 36;
+
+        heroMedia.style.setProperty('--hero-parallax', `${offset.toFixed(2)}px`);
+        ticking = false;
+    };
+
+    const requestUpdate = () => {
+        if (ticking) return;
+        ticking = true;
+        window.requestAnimationFrame(updateParallax);
+    };
+
+    updateParallax();
+    window.addEventListener('scroll', requestUpdate, { passive: true });
+    window.addEventListener('resize', requestUpdate);
+}
+
 function initMotionSystem() {
     if (!observer) {
         observer = new IntersectionObserver(
@@ -79,6 +114,7 @@ function initMotionSystem() {
 
     applyMotionTargets(document);
     startFloatingAccents();
+    initializeHeroParallax();
 }
 
 function initializeSiteAnimations() {
@@ -101,5 +137,8 @@ if (document.readyState === 'loading') {
 prefersReducedMotion.addEventListener('change', () => {
     if (prefersReducedMotion.matches) {
         document.querySelectorAll('[data-animate]').forEach(revealImmediately);
+        document.querySelectorAll('.home__media').forEach((element) => {
+            element.style.setProperty('--hero-parallax', '0px');
+        });
     }
 });

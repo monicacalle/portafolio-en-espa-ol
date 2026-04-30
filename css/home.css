@@ -1,43 +1,116 @@
 .home {
   display: flex;
-  align-items: center;
+  align-items: stretch;
   justify-content: center;
-  padding-top: 40px;
+  padding: 0;
   overflow-x: clip;
+  min-height: 100svh;
 }
 
 .home__wrapper {
   width: 100%;
-  max-width: min(480px, 100%);
+  max-width: 100%;
   margin: 0 auto;
-  text-align: center;
   color: var(--third);
 }
 
-.home picture {
-  display: block;
-  width: 100%;
-  max-width: 100%;
-  margin: 0 auto;
+.home__stage {
+  position: relative;
+  min-height: 100svh;
+  padding: clamp(1.5rem, 4vw, 2.75rem);
+  padding-top: calc(var(--header-height) + clamp(1rem, 2vw, 1.6rem));
   overflow: hidden;
+  isolation: isolate;
+  background: #42210b;
+  box-shadow: none;
+}
+
+.home__media {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%) translateY(var(--hero-parallax, 0px));
+  z-index: 2;
+  width: min(100%, 620px);
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  will-change: transform;
 }
 
 .home__hero-image {
   display: block;
   width: 100%;
   max-width: 100%;
-  margin: 0 auto;
-  object-fit: contain;
-  object-position: center center;
+  margin: 0;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 0;
+  box-shadow: none;
   transform: none;
 }
 
 .home__title {
-  font-size: var(--main-title);
-  color: var(--primary);
-  font-weight: 600;
-  margin: 5% 0 0 0;
-  line-height: 1;
+  position: absolute;
+  inset: 0;
+  margin: 0;
+  color: #c4d9dd;
+  z-index: 1;
+  pointer-events: none;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: clamp(1.25rem, 3vw, 2rem);
+  padding-bottom: clamp(1rem, 2.6vw, 1.6rem);
+  overflow: hidden;
+}
+
+.home__title-word {
+  display: flex;
+  font-family: var(--font-heading);
+  font-size: clamp(4.2rem, 15vw, 12rem);
+  font-weight: 400;
+  letter-spacing: -0.06em;
+  white-space: nowrap;
+  line-height: 0.82;
+}
+
+.home__stage::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(196, 217, 221, 0.08), transparent 26%),
+    radial-gradient(circle at 78% 32%, rgba(15, 7, 3, 0.16), transparent 24%),
+    repeating-linear-gradient(
+      0deg,
+      rgba(196, 217, 221, 0.03) 0 1px,
+      transparent 1px 6px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      rgba(15, 7, 3, 0.05) 0 1px,
+      transparent 1px 7px
+    );
+  opacity: 0.8;
+}
+
+.home__title-word--left {
+  margin-right: clamp(1rem, 13vw, 12rem);
+}
+
+.home__title-word--right {
+  margin-left: clamp(1rem, 13vw, 12rem);
+}
+
+.home__letter {
+  display: inline-block;
+  transform: translateY(-150%);
+  opacity: 0;
+  animation: home-letter-drop 1.4s cubic-bezier(0.18, 0.92, 0.18, 1) forwards;
+  animation-delay: calc(var(--i) * 0.08s + 0.15s);
 }
 
 .home__text-animation {
@@ -210,21 +283,36 @@
   }
 }
 
+@keyframes home-letter-drop {
+  0% {
+    transform: translateY(-150%);
+    opacity: 0;
+  }
+  72% {
+    opacity: 1;
+  }
+  82% {
+    transform: translateY(8%);
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
 @media (min-width: 769px) {
   .home {
-    padding-top: 4rem;
+    min-height: 100svh;
   }
 
   .home__wrapper {
-    width: min(100%, 1100px);
+    width: 100%;
     max-width: none;
   }
 
   .home__hero-image {
     width: 100%;
     max-width: 100%;
-    transform: none;
-    margin: 0 auto;
   }
 
   .home__span::after {
@@ -232,5 +320,33 @@
     animation:
       cursor 0.6s infinite,
       typing 20s steps(20) infinite;
+  }
+}
+
+@media (max-width: 768px) {
+  .home__stage {
+    min-height: 100svh;
+    padding-top: calc(var(--header-height) + 0.9rem);
+  }
+
+  .home__media {
+    width: min(92vw, 420px);
+  }
+
+  .home__title {
+    padding-inline: 0.85rem;
+    padding-bottom: 1rem;
+  }
+
+  .home__title-word {
+    font-size: clamp(3.2rem, 15vw, 5.4rem);
+  }
+
+  .home__title-word--left {
+    margin-right: clamp(0.25rem, 10vw, 4.5rem);
+  }
+
+  .home__title-word--right {
+    margin-left: clamp(0.25rem, 10vw, 4.5rem);
   }
 }

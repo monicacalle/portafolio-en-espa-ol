@@ -20,32 +20,35 @@ if (!menuIcon || !navbar || navLinks.length === 0) {
         });
     }
 
-    if ('IntersectionObserver' in window && sections.length > 0) {
-        const visibleSections = new Map();
+    if (sections.length > 0) {
+        let ticking = false;
 
-        const sectionObserver = new IntersectionObserver(
-            (entries) => {
-                entries.forEach((entry) => {
-                    if (entry.isIntersecting) {
-                        visibleSections.set(entry.target.id, entry.intersectionRatio);
-                    } else {
-                        visibleSections.delete(entry.target.id);
-                    }
-                });
+        const updateActiveSection = () => {
+            const headerHeight = document.querySelector('.header')?.offsetHeight ?? 0;
+            const activationLine = window.scrollY + headerHeight + window.innerHeight * 0.32;
 
-                const [currentSection] = [...visibleSections.entries()].sort((a, b) => b[1] - a[1]);
+            let currentSectionId = sections[0].id;
 
-                if (currentSection) {
-                    setActiveLink(currentSection[0]);
+            sections.forEach((section) => {
+                if (section.offsetTop <= activationLine) {
+                    currentSectionId = section.id;
                 }
-            },
-            {
-                rootMargin: '-30% 0px -45% 0px',
-                threshold: [0.2, 0.45, 0.7]
-            }
-        );
+            });
 
-        sections.forEach((section) => sectionObserver.observe(section));
+            setActiveLink(currentSectionId);
+            ticking = false;
+        };
+
+        const requestSectionUpdate = () => {
+            if (ticking) return;
+            ticking = true;
+            window.requestAnimationFrame(updateActiveSection);
+        };
+
+        updateActiveSection();
+        window.addEventListener('scroll', requestSectionUpdate, { passive: true });
+        window.addEventListener('resize', requestSectionUpdate);
+        window.addEventListener('load', requestSectionUpdate, { once: true });
     }
 
     navLinks.forEach((link) => {

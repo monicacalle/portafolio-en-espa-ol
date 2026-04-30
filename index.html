@@ -49,7 +49,6 @@
         <link rel="stylesheet" href="css/skills.css" />
         <link rel="stylesheet" href="css/curriculum.css" />
         <link rel="stylesheet" href="css/projects.css" />
-        <link rel="stylesheet" href="css/reviews.css" />
         <link rel="stylesheet" href="css/contact.css" />
         <link rel="stylesheet" href="css/footer.css" />
 
@@ -161,9 +160,6 @@
                         <a class="navbar__link" href="#projects" title="Explorar mis proyectos">Proyectos</a>
                     </li>
                     <li>
-                        <a class="navbar__link" href="#reviews" title="Ver reseñas y comentarios">Reseñas</a>
-                    </li>
-                    <li>
                         <a class="navbar__link" href="#contact" title="Ponte en contacto conmigo">Contacto</a>
                     </li>
                 </ul>
@@ -173,57 +169,91 @@
         <main>
             <section class="home" id="home">
                 <div class="home__wrapper">
-                    <picture>
-                        <source srcset="/assets/images/fondohero.png" media="(min-width: 769px)" type="image/png" />
-                        <img
-                            class="home__hero-image"
-                            src="/assets/images/mobile.png"
-                            alt="Imagen principal del portafolio"
-                            width="1107"
-                            height="898"
-                            loading="eager"
-                            fetchpriority="high"
-                            decoding="async"
-                        />
-                    </picture>
+                    <div class="home__stage">
+                        <h1 class="home__title">
+                            <span class="home__title-word home__title-word--left" aria-hidden="true">
+                                <span class="home__letter" style="--i: 0">P</span>
+                                <span class="home__letter" style="--i: 1">O</span>
+                                <span class="home__letter" style="--i: 2">R</span>
+                                <span class="home__letter" style="--i: 3">T</span>
+                                <span class="home__letter" style="--i: 4">A</span>
+                            </span>
+                            <span class="visually-hidden">PORTAFOLIO</span>
+                            <span class="home__title-word home__title-word--right" aria-hidden="true">
+                                <span class="home__letter" style="--i: 5">F</span>
+                                <span class="home__letter" style="--i: 6">O</span>
+                                <span class="home__letter" style="--i: 7">L</span>
+                                <span class="home__letter" style="--i: 8">I</span>
+                                <span class="home__letter" style="--i: 9">O</span>
+                            </span>
+                        </h1>
+                        <div class="home__media">
+                            <img
+                                class="home__hero-image"
+                                src="/assets/profilepicture.png"
+                                alt="Foto de perfil para el hero del portafolio"
+                                width="832"
+                                height="1248"
+                                loading="eager"
+                                fetchpriority="high"
+                                decoding="async"
+                            />
+                        </div>
+                    </div>
                 </div>
             </section>
 
             <section class="about" id="about">
                 <div class="about__wrapper">
-                    <h2 class="about__title">Conóceme mejor</h2>
-
                     <div class="about__grid">
+                        <div class="about__content">
+                            <div class="about__intro">
+                                <h2 class="about__title">SOBRE MÍ</h2>
+                            </div>
+
+                            <p class="about__subtitle">
+                                Hola, mi nombre es <span class="about__subtitle-name">Monica Calle</span>.
+                            </p>
+
+                            <p class="about__description">
+                                Soy diseñadora UX, diseñadora gráfica y profesional con experiencia en Front-End, y
+                                combino pensamiento estratégico, sensibilidad visual y conocimiento técnico para crear
+                                experiencias digitales que conecten de verdad con las personas. Mi perfil está marcado
+                                tanto por el diseño como por el desarrollo, lo que me permite abordar cada proyecto
+                                con un equilibrio entre creatividad, estructura y usabilidad. Soy una persona muy
+                                visual por naturaleza, y disfruto transformar ideas en interfaces intuitivas,
+                                cuidadas y con sentido, que dejen una impresión duradera.
+                            </p>
+
+                            <div class="about__actions">
+                                <a
+                                    class="about__btn"
+                                    href="/assets/curriculum/Monicacalle_cv.pdf"
+                                    target="_blank"
+                                    rel="noreferrer noopener"
+                                >
+                                    Abrir mi CV
+                                </a>
+
+                                <a
+                                    class="about__btn about__btn--ghost"
+                                    href="/assets/portafolio grafico.pdf"
+                                    target="_blank"
+                                    rel="noreferrer noopener"
+                                >
+                                    Abrir mi portafolio gráfico
+                                </a>
+                            </div>
+                        </div>
+
                         <div class="about__img-container">
                             <img
                                 class="about__img"
-                                src="/assets/images/Asset 3.png"
+                                src="/assets/images/A3842F83-2B71-4865-86AB-E1A4CF8BF287.PNG"
                                 alt="Foto de perfil"
                                 loading="lazy"
                                 decoding="async"
                             />
-                        </div>
-
-                        <div class="about__content">
-                            <p class="about__description">
-                                Soy diseñadora UX con experiencia en Front-End, y combino pensamiento estratégico,
-                                sensibilidad visual y conocimiento técnico para crear experiencias digitales que
-                                conecten de verdad con las personas. Mi perfil está marcado tanto por el diseño como
-                                por el desarrollo, lo que me permite abordar cada proyecto con un equilibrio entre
-                                creatividad, estructura y usabilidad. Soy una persona muy visual por naturaleza, y
-                                disfruto transformar ideas en interfaces intuitivas, cuidadas y con sentido, que
-                                dejen una impresión duradera.
-                            </p>
-
-                            <a
-                                class="about__btn"
-                                href="/assets/curriculum/Monicacalle_cv.pdf"
-                                download="cv-monica-calle.pdf"
-                                target="_blank"
-                                rel="noreferrer"
-                            >
-                                Descargar mi CV
-                            </a>
                         </div>
                     </div>
                 </div>
@@ -411,8 +441,16 @@
                     <h2 class="projects__title">Proyectos en los que he trabajado</h2>
 
                     <div class="projects__category">
-                        <h3 class="projects__category-title">Proyectos UX/UI</h3>
-                        <div class="projects__gallery">
+                        <div class="projects__category-intro">
+                            <span class="projects__eyebrow">01</span>
+                            <h3 class="projects__category-title">Proyectos UX/UI</h3>
+                            <p class="projects__category-description">
+                                Aplicaciones y conceptos digitales donde combino investigación, estructura y una
+                                dirección visual cuidada para construir experiencias claras y memorables.
+                            </p>
+                        </div>
+
+                        <div class="projects__gallery projects__gallery--duo">
                             <article class="project-card">
                                 <img
                                     class="project-card__img"
@@ -464,9 +502,17 @@
                     </div>
 
                     <div class="projects__category">
-                        <h3 class="projects__category-title">Sitios web que he creado</h3>
-                        <div class="projects__gallery">
-                            <article class="project-card">
+                        <div class="projects__category-intro">
+                            <span class="projects__eyebrow">02</span>
+                            <h3 class="projects__category-title">Sitios web que he creado</h3>
+                            <p class="projects__category-description">
+                                Webs desarrolladas con WordPress, Webflow y front-end a medida, pensadas para unir
+                                marca, funcionalidad y detalle visual en una misma experiencia.
+                            </p>
+                        </div>
+
+                        <div class="projects__gallery projects__gallery--editorial">
+                            <article class="project-card project-card--tall">
                                 <img
                                     class="project-card__img"
                                     src="/assets/images/isabellamendozaweb.webp"
@@ -581,9 +627,17 @@
                     </div>
 
                     <div class="projects__category">
-                        <h3 class="projects__category-title">Proyecto creativo</h3>
-                        <div class="projects__gallery">
-                            <article class="project-card">
+                        <div class="projects__category-intro">
+                            <span class="projects__eyebrow">03</span>
+                            <h3 class="projects__category-title">Proyecto creativo</h3>
+                            <p class="projects__category-description">
+                                Piezas de branding y campañas donde exploro una estética más editorial, expresiva y
+                                conceptual, sin perder claridad ni coherencia visual.
+                            </p>
+                        </div>
+
+                        <div class="projects__gallery projects__gallery--creative">
+                            <article class="project-card project-card--wide">
                                 <img
                                     class="project-card__img"
                                     src="/assets/images/Artboard 1.png"
@@ -639,150 +693,6 @@
                                 </div>
                             </article>
                         </div>
-                    </div>
-                </div>
-            </section>
-
-            <section class="reviews" id="reviews">
-                <div class="reviews__container">
-                    <h2 class="reviews__title">Testimonios</h2>
-
-                    <div class="carousel" id="reviewsCarousel">
-                        <div class="carousel__track" id="carouselTrack">
-                            <article class="carousel__card">
-                                <div class="carousel__card-inner">
-                                    <img
-                                        src="/assets/images/tomas.webp"
-                                        alt="Tomás"
-                                        class="carousel__card-img"
-                                        width="100"
-                                        height="100"
-                                        loading="lazy"
-                                        decoding="async"
-                                    />
-                                    <h3 class="carousel__card-name">Tomás</h3>
-                                    <h4 class="carousel__card-role">Líder de Front-End en Paktolus</h4>
-                                    <p class="carousel__card-desc">
-                                        Mónica es una persona extremadamente trabajadora y dedicada. Tuve el placer de
-                                        trabajar con ella y fue una gran experiencia. Destaca por su capacidad de
-                                        trabajo en equipo, tanto al dar como al recibir feedback. Siempre está
-                                        dispuesta a aprender y a compartir lo que sabe.
-                                    </p>
-                                </div>
-                            </article>
-
-                            <article class="carousel__card">
-                                <div class="carousel__card-inner">
-                                    <img
-                                        src="/assets/images/matias.webp"
-                                        alt="Matías"
-                                        class="carousel__card-img"
-                                        width="100"
-                                        height="100"
-                                        loading="lazy"
-                                        decoding="async"
-                                    />
-                                    <h3 class="carousel__card-name">Matías</h3>
-                                    <h4 class="carousel__card-role">Desarrollador Full Stack</h4>
-                                    <p class="carousel__card-desc">
-                                        Trabajé con Mónica en el equipo de Enerlink. Me gustaría destacar su
-                                        proactividad en la colaboración, su comunicación clara y sus habilidades
-                                        técnicas. Fue un placer compartir equipo con ella.
-                                    </p>
-                                </div>
-                            </article>
-
-                            <article class="carousel__card">
-                                <div class="carousel__card-inner">
-                                    <img
-                                        src="/assets/images/geanina.webp"
-                                        alt="Giannina"
-                                        class="carousel__card-img"
-                                        width="100"
-                                        height="100"
-                                        loading="lazy"
-                                        decoding="async"
-                                    />
-                                    <h3 class="carousel__card-name">Giannina</h3>
-                                    <h4 class="carousel__card-role">Coordinadora de Relaciones Corporativas</h4>
-                                    <p class="carousel__card-desc">
-                                        Mónica supervisó mis estudios en 4Geeks Academy. Siempre estuvo disponible
-                                        para responder preguntas y generar confianza gracias a su actitud empática. Es
-                                        una persona dedicada y perseverante.
-                                    </p>
-                                </div>
-                            </article>
-
-                            <article class="carousel__card">
-                                <div class="carousel__card-inner">
-                                    <img
-                                        src="/assets/images/ricardo.webp"
-                                        alt="Ricardo"
-                                        class="carousel__card-img"
-                                        width="100"
-                                        height="100"
-                                        loading="lazy"
-                                        decoding="async"
-                                    />
-                                    <h3 class="carousel__card-name">Ricardo</h3>
-                                    <h4 class="carousel__card-role">Desarrollador Full Stack</h4>
-                                    <p class="carousel__card-desc">
-                                        Conocí a Mónica durante la certificación de Full Stack Developer en 4Geeks
-                                        Academy, donde era asistente de docencia. Sus revisiones constantes de
-                                        proyectos, sus consejos y su apoyo fueron de lo mejor que recibí durante todo
-                                        el proceso.
-                                    </p>
-                                </div>
-                            </article>
-
-                            <article class="carousel__card">
-                                <div class="carousel__card-inner">
-                                    <img
-                                        src="/assets/images/julio.webp"
-                                        alt="Julio"
-                                        class="carousel__card-img"
-                                        width="100"
-                                        height="100"
-                                        loading="lazy"
-                                        decoding="async"
-                                    />
-                                    <h3 class="carousel__card-name">Julio</h3>
-                                    <h4 class="carousel__card-role">Desarrollador Full Stack</h4>
-                                    <p class="carousel__card-desc">
-                                        Mónica siempre ha sido muy resolutiva, proactiva y comprometida con entregar
-                                        un trabajo excelente. Disfruté mucho la experiencia de trabajar contigo,
-                                        Mónica. Gracias por apoyar siempre la mejora continua de nuestro proyecto del
-                                        curso.
-                                    </p>
-                                </div>
-                            </article>
-
-                            <article class="carousel__card">
-                                <div class="carousel__card-inner">
-                                    <img
-                                        src="/assets/images/nicolas.webp"
-                                        alt="Nicolás"
-                                        class="carousel__card-img"
-                                        width="100"
-                                        height="100"
-                                        loading="lazy"
-                                        decoding="async"
-                                    />
-                                    <h3 class="carousel__card-name">Nicolás</h3>
-                                    <h4 class="carousel__card-role">Desarrollador Full Stack</h4>
-                                    <p class="carousel__card-desc">
-                                        Mónica es una excelente persona con quien trabajar, siempre dispuesta a ayudar
-                                        y a compartir su conocimiento con los demás. Trabajamos juntos en un proyecto
-                                        y siempre hubo muy buena comunicación.
-                                    </p>
-                                </div>
-                            </article>
-                        </div>
-                    </div>
-
-                    <div class="carousel__controls">
-                        <button class="carousel__btn" title="Ver el testimonio anterior" id="prevBtn">Anterior</button>
-                        <button class="carousel__btn" title="Ver el siguiente testimonio" id="nextBtn">Siguiente</button>
                     </div>
                 </div>
             </section>
@@ -866,69 +776,115 @@
 
         <footer class="footer" id="footer">
             <div class="footer__wrapper">
-                <div class="footer__brand">
-                    <a href="#home" class="footer__logo" title="Ir al inicio">
-                        <img
-                            class="footer__logo-img"
-                            src="/assets/images/LOGONEGATIVO.png"
-                            alt="Logo de Mónica Calle"
-                            loading="lazy"
-                            decoding="async"
-                        />
-                    </a>
-                    <h4 class="footer__title">Construyamos algo bonito y útil.</h4>
-                    <p class="footer__text">Desarrollo front-end y diseño con un enfoque cuidado y orientado al detalle.</p>
-                </div>
+                <div class="footer__top">
+                    <div class="footer__brand">
+                        <a href="#home" class="footer__logo" title="Ir al inicio">
+                            <img
+                                class="footer__logo-img"
+                                src="/assets/images/Asset 4.png"
+                                alt="Logo de Mónica Calle"
+                                loading="lazy"
+                                decoding="async"
+                            />
+                        </a>
+                        <p class="footer__text">
+                            Portafolio de Mónica Calle. Diseño UX/UI, diseño gráfico y desarrollo front-end con una
+                            mirada visual, estratégica y cuidada.
+                        </p>
 
-                <div class="footer__contact">
-                    <a class="footer__mail" href="mailto:monicacalle369@gmail.com">monicacalle369@gmail.com</a>
-
-                    <div class="footer__social-icons">
-                        <a
-                            class="footer__social-link"
-                            target="_blank"
-                            rel="noreferrer"
-                            title="Visitar mi perfil de LinkedIn"
-                            href="https://www.linkedin.com/in/monica-calle-betancourt/"
-                        >
-                            <svg class="footer__icon" title="LinkedIn" xmlns="http://www.w3.org/2000/svg">
-                                <use href="#icon-linkedin"></use>
-                            </svg>
-                            <span>LinkedIn</span>
-                        </a>
-                        <a
-                            class="footer__social-link"
-                            target="_blank"
-                            rel="noreferrer"
-                            title="Visitar mi perfil de GitHub"
-                            href="https://github.com/monicacalle"
-                        >
-                            <svg class="footer__icon" title="GitHub" xmlns="http://www.w3.org/2000/svg">
-                                <use href="#icon-github"></use>
-                            </svg>
-                            <span>GitHub</span>
-                        </a>
-                        <a
-                            class="footer__social-link"
-                            target="_blank"
-                            rel="noreferrer"
-                            title="Visitar mi perfil de Instagram"
-                            href="https://www.instagram.com/monica_calle_b/"
-                        >
-                            <svg class="footer__icon" title="Instagram" xmlns="http://www.w3.org/2000/svg">
-                                <use href="#icon-instagram"></use>
-                            </svg>
-                            <span>Instagram</span>
-                        </a>
+                        <div class="footer__social-icons">
+                            <a
+                                class="footer__social-link"
+                                target="_blank"
+                                rel="noreferrer"
+                                title="Visitar mi perfil de LinkedIn"
+                                href="https://www.linkedin.com/in/monica-calle-betancourt/"
+                                aria-label="LinkedIn"
+                            >
+                                <svg class="footer__icon" title="LinkedIn" xmlns="http://www.w3.org/2000/svg">
+                                    <use href="#icon-linkedin"></use>
+                                </svg>
+                            </a>
+                            <a
+                                class="footer__social-link"
+                                target="_blank"
+                                rel="noreferrer"
+                                title="Visitar mi perfil de GitHub"
+                                href="https://github.com/monicacalle"
+                                aria-label="GitHub"
+                            >
+                                <svg class="footer__icon" title="GitHub" xmlns="http://www.w3.org/2000/svg">
+                                    <use href="#icon-github"></use>
+                                </svg>
+                            </a>
+                            <a
+                                class="footer__social-link"
+                                target="_blank"
+                                rel="noreferrer"
+                                title="Visitar mi perfil de Instagram"
+                                href="https://www.instagram.com/monica_calle_b/"
+                                aria-label="Instagram"
+                            >
+                                <svg class="footer__icon" title="Instagram" xmlns="http://www.w3.org/2000/svg">
+                                    <use href="#icon-instagram"></use>
+                                </svg>
+                            </a>
+                        </div>
                     </div>
 
-                    <p class="footer__note">Portafolio de Mónica Calle</p>
+                    <div class="footer__nav">
+                        <div class="footer__col">
+                            <h4 class="footer__heading">Explora</h4>
+                            <a class="footer__link" href="#about">Sobre mí</a>
+                            <a class="footer__link" href="#skills">Habilidades</a>
+                            <a class="footer__link" href="#curriculum">Currículum</a>
+                            <a class="footer__link" href="#projects">Proyectos</a>
+                        </div>
+
+                        <div class="footer__col">
+                            <h4 class="footer__heading">Perfil</h4>
+                            <a class="footer__link" href="#contact">Contacto</a>
+                            <a class="footer__link" href="mailto:monicacalle369@gmail.com">Correo</a>
+                            <a
+                                class="footer__link"
+                                href="/assets/curriculum/Monicacalle_cv.pdf"
+                                target="_blank"
+                                rel="noreferrer noopener"
+                            >
+                                Abrir CV
+                            </a>
+                            <a
+                                class="footer__link"
+                                href="/assets/portafolio grafico.pdf"
+                                target="_blank"
+                                rel="noreferrer noopener"
+                            >
+                                Portafolio gráfico
+                            </a>
+                        </div>
+
+                        <div class="footer__col">
+                            <h4 class="footer__heading">Áreas</h4>
+                            <p class="footer__meta">UX/UI Design</p>
+                            <p class="footer__meta">Diseño gráfico</p>
+                            <p class="footer__meta">Front-End</p>
+                            <p class="footer__meta">WordPress</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer__bottom">
+                    <p class="footer__note">© 2026 Mónica Calle. Todos los derechos reservados.</p>
+                    <div class="footer__legal">
+                        <a class="footer__legal-link" href="#home">Inicio</a>
+                        <a class="footer__legal-link" href="#projects">Proyectos</a>
+                        <a class="footer__legal-link" href="#contact">Contacto</a>
+                    </div>
                 </div>
             </div>
         </footer>
 
         <script src="js/header.js" defer></script>
-        <script src="js/reviews.js" defer></script>
         <script src="js/animations.js" defer></script>
     </body>
 </html>
