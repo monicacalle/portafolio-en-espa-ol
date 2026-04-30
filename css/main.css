@@ -54,6 +54,7 @@
   --shadow: rgba(84, 83, 83, 0.5);
   --hero-accent: #c4d9dd;
   --hero-accent-dark: #42210b;
+  --card-border: #c4d9dd;
 
   /* Mantengo tus tamaños de fuente actuales */
   --main-title: clamp(2.6rem, 10vw, 4rem);
@@ -279,6 +280,16 @@ section {
     box-shadow 0.35s ease,
     border-color 0.35s ease,
     background-color 0.35s ease;
+}
+
+.skills__card,
+.project-card,
+.curriculum__item,
+.contact__intro,
+.contact__form {
+  border-width: 1px !important;
+  border-style: solid !important;
+  border-color: var(--card-border) !important;
 }
 
 .skills__card:hover,
