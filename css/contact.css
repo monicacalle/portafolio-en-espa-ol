@@ -223,6 +223,13 @@
   box-shadow: 0 16px 30px rgba(18, 9, 4, 0.22);
 }
 
+.contact__status {
+  margin-top: 0.85rem;
+  font-size: 0.88rem;
+  color: rgba(255, 248, 242, 0.74);
+  text-align: center;
+}
+
 .visually-hidden {
   position: absolute;
   left: -9999px;

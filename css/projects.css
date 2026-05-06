@@ -176,9 +176,18 @@
     min-height: 100%;
   }
 
+  .projects__gallery--editorial .project-card--featured {
+    min-height: 100%;
+  }
+
   .projects__gallery--creative .project-card--wide {
     grid-column: span 2;
     min-height: 360px;
+  }
+
+  .projects__gallery--creative .project-card--creative-feature {
+    grid-row: span 2;
+    min-height: 100%;
   }
 }
 
@@ -196,10 +205,18 @@
   .project-card {
     min-height: 340px;
   }
+
+  .projects__gallery--editorial .project-card--featured {
+    min-height: 100%;
+  }
+
+  .projects__gallery--creative .project-card--creative-feature {
+    min-height: 100%;
+  }
 }
 
 @media (max-width: 819px) {
   .projects__gallery--creative .project-card--wide {
-    min-height: 280px;
+    min-height: 320px;
   }
 }
