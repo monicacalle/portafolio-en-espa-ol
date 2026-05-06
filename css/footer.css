@@ -176,12 +176,14 @@
   .footer__top,
   .footer__bottom {
     text-align: center;
+    justify-items: center;
   }
 
   .footer__brand,
   .footer__col {
     align-items: center;
     text-align: center;
+    width: 100%;
   }
 
   .footer__logo {
@@ -191,6 +193,7 @@
   .footer__text {
     max-width: 30ch;
     margin-inline: auto;
+    text-align: center;
   }
 
   .footer__social-icons,
@@ -200,5 +203,6 @@
 
   .footer__nav {
     grid-template-columns: 1fr;
+    justify-items: center;
   }
 }

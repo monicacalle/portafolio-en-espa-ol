@@ -147,7 +147,7 @@
   min-height: 100%;
   max-height: 640px;
   object-fit: cover;
-  border-radius: 0;
+  border-radius: 1.5rem;
   transition: transform 0.3s ease;
   box-shadow: 0 16px 34px rgba(66, 33, 11, 0.12);
 }

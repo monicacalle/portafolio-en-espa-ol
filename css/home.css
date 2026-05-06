@@ -335,22 +335,31 @@
 
   .home__title {
     z-index: 3;
-    align-items: flex-start;
-    justify-content: center;
+    top: calc(var(--header-height) + 1.75rem);
+    right: 0;
+    bottom: auto;
+    left: 0;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
     padding-inline: 0.4rem;
-    padding-top: clamp(5.8rem, 30vw, 11rem);
+    padding-top: 0;
     padding-bottom: 0;
   }
 
   .home__title-word {
     font-size: clamp(3.7rem, 17.5vw, 6.3rem);
+    width: 100%;
+    justify-content: center;
+    line-height: 0.94;
   }
 
   .home__title-word--left {
-    margin-right: 0.08em;
+    margin-right: 0;
   }
 
   .home__title-word--right {
     margin-left: 0;
+    margin-top: 0.08em;
   }
 }
