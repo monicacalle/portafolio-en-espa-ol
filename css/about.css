@@ -163,20 +163,28 @@
   }
 
   .about__content {
-    order: 2;
-    align-items: flex-start;
+    order: 1;
+    align-items: center;
+    text-align: center;
   }
 
   .about__img-container {
-    order: 1;
-    justify-content: flex-start;
-    align-items: flex-start;
+    order: 2;
+    justify-content: center;
+    align-items: center;
   }
 
   .about__img {
     width: min(100%, 320px);
     height: auto;
     min-height: 0;
+  }
+
+  .about__intro,
+  .about__description,
+  .about__actions {
+    text-align: center;
+    justify-content: center;
   }
 }
 

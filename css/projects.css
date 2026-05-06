@@ -180,6 +180,11 @@
     min-height: 100%;
   }
 
+  .projects__gallery--editorial .project-card--showcase {
+    grid-column: span 2;
+    min-height: 320px;
+  }
+
   .projects__gallery--creative .project-card--wide {
     grid-column: span 2;
     min-height: 360px;
@@ -210,12 +215,35 @@
     min-height: 100%;
   }
 
+  .projects__gallery--editorial .project-card--showcase {
+    min-height: 360px;
+  }
+
   .projects__gallery--creative .project-card--creative-feature {
     min-height: 100%;
   }
 }
 
 @media (max-width: 819px) {
+  .projects__title,
+  .projects__category-intro,
+  .projects__category-description,
+  .project-card__content {
+    text-align: center;
+  }
+
+  .projects__eyebrow {
+    justify-content: center;
+  }
+
+  .projects__category-description {
+    margin-inline: auto;
+  }
+
+  .project-card__links {
+    justify-content: center;
+  }
+
   .projects__gallery--creative .project-card--wide {
     min-height: 320px;
   }
