@@ -1,817 +1,991 @@
 <!doctype html>
 <html lang="es">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Portafolio UX/UI y Front-End de Mónica Calle</title>
-        <meta
-            name="description"
-            content="Portafolio de Mónica Calle Betancourt, diseñadora UX/UI y desarrolladora front-end. Proyectos web, branding, experiencia, habilidades y contacto."
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portafolio UX/UI y Front-End de Mónica Calle</title>
+    <meta
+      name="description"
+      content="Portafolio de Mónica Calle Betancourt, diseñadora UX/UI y desarrolladora front-end. Proyectos web, branding, experiencia, habilidades y contacto."
+    />
+    <meta
+      name="keywords"
+      content="Mónica Calle, portafolio, UX UI, desarrolladora front-end, WordPress, diseño web, branding, JavaScript, React"
+    />
+    <meta name="author" content="Mónica Calle Betancourt" />
+    <meta
+      name="robots"
+      content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+    />
+    <meta name="theme-color" content="#f0f0e0" />
+    <meta name="format-detection" content="telephone=no" />
+
+    <link
+      rel="canonical"
+      href="https://my-portfolio-coral-zeta-44.vercel.app/"
+    />
+    <link
+      rel="preload"
+      href="/assets/fonts/geist-v1-latin/geist-v1-latin-regular.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="/assets/images/mobile.png"
+      as="image"
+      media="(max-width: 768px)"
+    />
+    <link
+      rel="preload"
+      href="/assets/images/fondohero.png"
+      as="image"
+      media="(min-width: 769px)"
+    />
+
+    <meta property="og:locale" content="es_ES" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="Portafolio UX/UI y Front-End de Mónica Calle"
+    />
+    <meta
+      property="og:description"
+      content="Diseño UX/UI, desarrollo front-end, WordPress y proyectos creativos en un mismo portafolio."
+    />
+    <meta
+      property="og:url"
+      content="https://my-portfolio-coral-zeta-44.vercel.app/"
+    />
+    <meta property="og:site_name" content="Portafolio de Mónica Calle" />
+    <meta
+      property="og:image"
+      content="https://my-portfolio-coral-zeta-44.vercel.app/assets/images/monica.png"
+    />
+    <meta property="og:image:alt" content="Retrato de Mónica Calle" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Portafolio UX/UI y Front-End de Mónica Calle"
+    />
+    <meta
+      name="twitter:description"
+      content="Proyectos web, branding, UX/UI, experiencia profesional y contacto."
+    />
+    <meta
+      name="twitter:image"
+      content="https://my-portfolio-coral-zeta-44.vercel.app/assets/images/monica.png"
+    />
+
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/home.css" />
+    <link rel="stylesheet" href="css/about.css" />
+    <link rel="stylesheet" href="css/skills.css" />
+    <link rel="stylesheet" href="css/curriculum.css" />
+    <link rel="stylesheet" href="css/projects.css" />
+    <link rel="stylesheet" href="css/contact.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebSite",
+            "@id": "https://my-portfolio-coral-zeta-44.vercel.app/#website",
+            "url": "https://my-portfolio-coral-zeta-44.vercel.app/",
+            "name": "Portafolio de Mónica Calle",
+            "inLanguage": "es-ES",
+            "description": "Portafolio de diseño UX/UI, desarrollo front-end y proyectos creativos."
+          },
+          {
+            "@type": "Person",
+            "@id": "https://my-portfolio-coral-zeta-44.vercel.app/#person",
+            "name": "Mónica Calle Betancourt",
+            "url": "https://my-portfolio-coral-zeta-44.vercel.app/",
+            "image": "https://my-portfolio-coral-zeta-44.vercel.app/assets/images/monica.png",
+            "jobTitle": "Diseñadora UX/UI y Desarrolladora Front-End",
+            "worksFor": {
+              "@type": "Organization",
+              "name": "Neerutech"
+            },
+            "sameAs": [
+              "https://www.linkedin.com/in/monica-calle-betancourt/",
+              "https://github.com/monicacalle"
+            ],
+            "knowsAbout": [
+              "UX/UI",
+              "Desarrollo Front-End",
+              "WordPress",
+              "Webflow",
+              "React",
+              "JavaScript",
+              "Branding",
+              "Diseño visual"
+            ]
+          }
+        ]
+      }
+    </script>
+  </head>
+
+  <body>
+    <svg class="iconos" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <symbol id="icon-linkedin" viewBox="0 0 448 512">
+        <path
+          d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"
         />
-        <meta
-            name="keywords"
-            content="Mónica Calle, portafolio, UX UI, desarrolladora front-end, WordPress, diseño web, branding, JavaScript, React"
+      </symbol>
+
+      <symbol id="icon-github" viewBox="0 0 496 512">
+        <path
+          d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3 .3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5 .3-6.2 2.3zm44.2-1.7c-2.9 .7-4.9 2.6-4.6 4.9 .3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3 .7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3 .3 2.9 2.3 3.9 1.6 1 3.6 .7 4.3-.7 .7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3 .7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3 .7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"
         />
-        <meta name="author" content="Mónica Calle Betancourt" />
-        <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
-        <meta name="theme-color" content="#f0f0e0" />
-        <meta name="format-detection" content="telephone=no" />
+      </symbol>
 
-        <link rel="canonical" href="https://my-portfolio-coral-zeta-44.vercel.app/" />
-        <link rel="preload" href="/assets/fonts/geist-v1-latin/geist-v1-latin-regular.woff2" as="font" type="font/woff2" crossorigin />
-        <link rel="preload" href="/assets/images/mobile.png" as="image" media="(max-width: 768px)" />
-        <link rel="preload" href="/assets/images/fondohero.png" as="image" media="(min-width: 769px)" />
-
-        <meta property="og:locale" content="es_ES" />
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content="Portafolio UX/UI y Front-End de Mónica Calle" />
-        <meta
-            property="og:description"
-            content="Diseño UX/UI, desarrollo front-end, WordPress y proyectos creativos en un mismo portafolio."
+      <symbol id="icon-instagram" viewBox="0 0 448 512">
+        <path
+          d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"
         />
-        <meta property="og:url" content="https://my-portfolio-coral-zeta-44.vercel.app/" />
-        <meta property="og:site_name" content="Portafolio de Mónica Calle" />
-        <meta property="og:image" content="https://my-portfolio-coral-zeta-44.vercel.app/assets/images/monica.png" />
-        <meta property="og:image:alt" content="Retrato de Mónica Calle" />
+      </symbol>
+    </svg>
 
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Portafolio UX/UI y Front-End de Mónica Calle" />
-        <meta
-            name="twitter:description"
-            content="Proyectos web, branding, UX/UI, experiencia profesional y contacto."
+    <header class="header" id="header">
+      <a href="#home" class="logo" title="Logo de Mónica Calle">
+        <img
+          class="logo__img"
+          src="/assets/images/Asset 4.png"
+          alt="Logo de Mónica Calle"
+          width="768"
+          height="202"
+          decoding="async"
         />
-        <meta name="twitter:image" content="https://my-portfolio-coral-zeta-44.vercel.app/assets/images/monica.png" />
+      </a>
 
-        <link rel="stylesheet" href="css/main.css" />
-        <link rel="stylesheet" href="css/header.css" />
-        <link rel="stylesheet" href="css/home.css" />
-        <link rel="stylesheet" href="css/about.css" />
-        <link rel="stylesheet" href="css/skills.css" />
-        <link rel="stylesheet" href="css/curriculum.css" />
-        <link rel="stylesheet" href="css/projects.css" />
-        <link rel="stylesheet" href="css/contact.css" />
-        <link rel="stylesheet" href="css/footer.css" />
-
-        <script type="application/ld+json">
-            {
-                "@context": "https://schema.org",
-                "@graph": [
-                    {
-                        "@type": "WebSite",
-                        "@id": "https://my-portfolio-coral-zeta-44.vercel.app/#website",
-                        "url": "https://my-portfolio-coral-zeta-44.vercel.app/",
-                        "name": "Portafolio de Mónica Calle",
-                        "inLanguage": "es-ES",
-                        "description": "Portafolio de diseño UX/UI, desarrollo front-end y proyectos creativos."
-                    },
-                    {
-                        "@type": "Person",
-                        "@id": "https://my-portfolio-coral-zeta-44.vercel.app/#person",
-                        "name": "Mónica Calle Betancourt",
-                        "url": "https://my-portfolio-coral-zeta-44.vercel.app/",
-                        "image": "https://my-portfolio-coral-zeta-44.vercel.app/assets/images/monica.png",
-                        "jobTitle": "Diseñadora UX/UI y Desarrolladora Front-End",
-                        "worksFor": {
-                            "@type": "Organization",
-                            "name": "Neerutech"
-                        },
-                        "sameAs": [
-                            "https://www.linkedin.com/in/monica-calle-betancourt/",
-                            "https://github.com/monicacalle"
-                        ],
-                        "knowsAbout": [
-                            "UX/UI",
-                            "Desarrollo Front-End",
-                            "WordPress",
-                            "Webflow",
-                            "React",
-                            "JavaScript",
-                            "Branding",
-                            "Diseño visual"
-                        ]
-                    }
-                ]
-            }
-        </script>
-    </head>
-
-    <body>
-        <svg class="iconos" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <symbol id="icon-linkedin" viewBox="0 0 448 512">
-                <path
-                    d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"
-                />
-            </symbol>
-
-            <symbol id="icon-github" viewBox="0 0 496 512">
-                <path
-                    d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3 .3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5 .3-6.2 2.3zm44.2-1.7c-2.9 .7-4.9 2.6-4.6 4.9 .3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3 .7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3 .3 2.9 2.3 3.9 1.6 1 3.6 .7 4.3-.7 .7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3 .7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3 .7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"
-                />
-            </symbol>
-
-            <symbol id="icon-instagram" viewBox="0 0 448 512">
-                <path
-                    d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"
-                />
-            </symbol>
-        </svg>
-
-        <header class="header" id="header">
-            <a href="#home" class="logo" title="Logo de Mónica Calle">
-                <img
-                    class="logo__img"
-                    src="/assets/images/Asset 4.png"
-                    alt="Logo de Mónica Calle"
-                    width="768"
-                    height="202"
-                    decoding="async"
-                />
-            </a>
-
-            <button
-                class="menu__icon"
-                type="button"
-                title="Abrir menú"
-                aria-label="Abrir menú de navegación"
-                aria-expanded="false"
+      <button
+        class="menu__icon"
+        type="button"
+        title="Abrir menú"
+        aria-label="Abrir menú de navegación"
+        aria-expanded="false"
+      >
+        <span class="menu__icon-box" aria-hidden="true">
+          <span class="menu__bar"></span>
+          <span class="menu__bar"></span>
+          <span class="menu__bar"></span>
+        </span>
+      </button>
+      <nav class="navbar" aria-label="Navegación principal">
+        <ul class="navbar__ul">
+          <li class="isActive">
+            <a
+              class="navbar__link"
+              href="#home"
+              title="Ir a la sección de inicio"
+              >Inicio</a
             >
-                <span class="menu__icon-box" aria-hidden="true">
-                    <span class="menu__bar"></span>
-                    <span class="menu__bar"></span>
-                    <span class="menu__bar"></span>
-                </span>
-            </button>
-            <nav class="navbar" aria-label="Navegación principal">
-                <ul class="navbar__ul">
-                    <li class="isActive">
-                        <a class="navbar__link" href="#home" title="Ir a la sección de inicio">Inicio</a>
-                    </li>
-                    <li>
-                        <a class="navbar__link" href="#about" title="Conocer más sobre mí">Sobre mí</a>
-                    </li>
-                    <li>
-                        <a class="navbar__link" href="#skills" title="Ver mis habilidades">Habilidades</a>
-                    </li>
-                    <li>
-                        <a class="navbar__link" href="#curriculum" title="Consultar mi currículum">Currículum</a>
-                    </li>
-                    <li>
-                        <a class="navbar__link" href="#projects" title="Explorar mis proyectos">Proyectos</a>
-                    </li>
-                    <li>
-                        <a class="navbar__link" href="#contact" title="Ponte en contacto conmigo">Contacto</a>
-                    </li>
-                </ul>
-            </nav>
-        </header>
+          </li>
+          <li>
+            <a class="navbar__link" href="#about" title="Conocer más sobre mí"
+              >Sobre mí</a
+            >
+          </li>
+          <li>
+            <a class="navbar__link" href="#skills" title="Ver mis habilidades"
+              >Habilidades</a
+            >
+          </li>
+          <li>
+            <a
+              class="navbar__link"
+              href="#curriculum"
+              title="Consultar mi currículum"
+              >Currículum</a
+            >
+          </li>
+          <li>
+            <a
+              class="navbar__link"
+              href="#projects"
+              title="Explorar mis proyectos"
+              >Proyectos</a
+            >
+          </li>
+          <li>
+            <a
+              class="navbar__link"
+              href="#contact"
+              title="Ponte en contacto conmigo"
+              >Contacto</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
 
-        <main>
-            <section class="home" id="home">
-                <div class="home__wrapper">
-                    <div class="home__stage">
-                        <h1 class="home__title">
-                            <span class="home__title-word home__title-word--left" aria-hidden="true">
-                                <span class="home__letter" style="--i: 0">P</span>
-                                <span class="home__letter" style="--i: 1">O</span>
-                                <span class="home__letter" style="--i: 2">R</span>
-                                <span class="home__letter" style="--i: 3">T</span>
-                                <span class="home__letter" style="--i: 4">A</span>
-                            </span>
-                            <span class="visually-hidden">PORTAFOLIO</span>
-                            <span class="home__title-word home__title-word--right" aria-hidden="true">
-                                <span class="home__letter" style="--i: 5">F</span>
-                                <span class="home__letter" style="--i: 6">O</span>
-                                <span class="home__letter" style="--i: 7">L</span>
-                                <span class="home__letter" style="--i: 8">I</span>
-                                <span class="home__letter" style="--i: 9">O</span>
-                            </span>
-                        </h1>
-                        <div class="home__media">
-                            <img
-                                class="home__hero-image"
-                                src="/assets/profilepicture.png"
-                                alt="Foto de perfil para el hero del portafolio"
-                                width="832"
-                                height="1248"
-                                loading="eager"
-                                fetchpriority="high"
-                                decoding="async"
-                            />
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section class="about" id="about">
-                <div class="about__wrapper">
-                    <div class="about__grid">
-                        <div class="about__content">
-                            <div class="about__intro">
-                                <h2 class="about__title">SOBRE MÍ</h2>
-                            </div>
-
-                            <p class="about__subtitle">
-                                Hola, mi nombre es <span class="about__subtitle-name">Monica Calle</span>.
-                            </p>
-
-                            <p class="about__description">
-                                Soy diseñadora UX, diseñadora gráfica y profesional con experiencia en Front-End, y
-                                combino pensamiento estratégico, sensibilidad visual y conocimiento técnico para crear
-                                experiencias digitales que conecten de verdad con las personas. Mi perfil está marcado
-                                tanto por el diseño como por el desarrollo, lo que me permite abordar cada proyecto
-                                con un equilibrio entre creatividad, estructura y usabilidad. Soy una persona muy
-                                visual por naturaleza, y disfruto transformar ideas en interfaces intuitivas,
-                                cuidadas y con sentido, que dejen una impresión duradera.
-                            </p>
-
-                            <div class="about__actions">
-                                <a
-                                    class="about__btn"
-                                    href="/assets/curriculum/Monicacalle_cv.pdf"
-                                    target="_blank"
-                                    rel="noreferrer noopener"
-                                >
-                                    Abrir mi CV
-                                </a>
-
-                                <a
-                                    class="about__btn about__btn--ghost"
-                                    href="/assets/portafolio grafico.pdf"
-                                    target="_blank"
-                                    rel="noreferrer noopener"
-                                >
-                                    Abrir mi portafolio gráfico
-                                </a>
-                            </div>
-                        </div>
-
-                        <div class="about__img-container">
-                            <img
-                                class="about__img"
-                                src="/assets/images/A3842F83-2B71-4865-86AB-E1A4CF8BF287.PNG"
-                                alt="Foto de perfil"
-                                loading="lazy"
-                                decoding="async"
-                            />
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section class="skills" id="skills">
-                <div class="skills__contenido">
-                    <h2 class="skills__title">Habilidades</h2>
-                    <p class="skills__intro">
-                        Una selección de las herramientas, plataformas y fortalezas que utilizo para diseñar y
-                        construir experiencias digitales con intención.
-                    </p>
-                    <div class="skills__grid">
-                        <article class="skills__card">
-                            <span class="skills__eyebrow">Desarrollo</span>
-                            <h3 class="skills__col-title">Construcción Front-End</h3>
-                            <p class="skills__description">
-                                Creación de interfaces responsive con una estructura limpia, maquetación accesible y
-                                atención al detalle.
-                            </p>
-                            <ul class="skills__tags">
-                                <li class="skills__tag">HTML5</li>
-                                <li class="skills__tag">CSS3</li>
-                                <li class="skills__tag">JavaScript</li>
-                                <li class="skills__tag">React</li>
-                                <li class="skills__tag">Git</li>
-                            </ul>
-                        </article>
-
-                        <article class="skills__card">
-                            <span class="skills__eyebrow">Plataformas</span>
-                            <h3 class="skills__col-title">CMS y No-Code</h3>
-                            <p class="skills__description">
-                                Creación y mantenimiento de sitios web cuidados, con sistemas de contenido flexibles
-                                y flujos visuales eficientes.
-                            </p>
-                            <ul class="skills__tags">
-                                <li class="skills__tag">WordPress</li>
-                                <li class="skills__tag">Webflow</li>
-                                <li class="skills__tag">Edición de contenido</li>
-                                <li class="skills__tag">Sistemas de diseño</li>
-                            </ul>
-                        </article>
-
-                        <article class="skills__card">
-                            <span class="skills__eyebrow">Diseño</span>
-                            <h3 class="skills__col-title">Diseño UI y visual</h3>
-                            <p class="skills__description">
-                                Transformación de ideas en direcciones visuales claras, wireframes, prototipos y
-                                recursos de interfaz alineados con la marca.
-                            </p>
-                            <ul class="skills__tags">
-                                <li class="skills__tag">Figma</li>
-                                <li class="skills__tag">Adobe Illustrator</li>
-                                <li class="skills__tag">Photoshop</li>
-                                <li class="skills__tag">InDesign</li>
-                            </ul>
-                        </article>
-
-                        <article class="skills__card">
-                            <span class="skills__eyebrow">Colaboración</span>
-                            <h3 class="skills__col-title">Fortalezas profesionales</h3>
-                            <p class="skills__description">
-                                Trabajo con equipos y clientes a través de una comunicación clara, resolución de
-                                problemas, adaptabilidad y una mentalidad centrada en el usuario.
-                            </p>
-                            <ul class="skills__tags">
-                                <li class="skills__tag">Comunicación</li>
-                                <li class="skills__tag">Trabajo en equipo</li>
-                                <li class="skills__tag">Resolución de problemas</li>
-                                <li class="skills__tag">Adaptabilidad</li>
-                            </ul>
-                        </article>
-                    </div>
-                </div>
-            </section>
-
-            <section class="projects" id="projects">
-                <div class="projects__wrapper">
-                    <h2 class="projects__title">Proyectos en los que he trabajado</h2>
-
-                    <div class="projects__category">
-                        <div class="projects__category-intro">
-                            <span class="projects__eyebrow">01</span>
-                            <h3 class="projects__category-title">Proyectos UX/UI</h3>
-                            <p class="projects__category-description">
-                                Aplicaciones y conceptos digitales donde combino investigación, estructura y una
-                                dirección visual cuidada para construir experiencias claras y memorables.
-                            </p>
-                        </div>
-
-                        <div class="projects__gallery projects__gallery--duo">
-                            <article class="project-card">
-                                <img
-                                    class="project-card__img"
-                                    src="/assets/images/vibe.png"
-                                    alt="Vibe App"
-                                    loading="lazy"
-                                    decoding="async"
-                                />
-                                <div class="project-card__content">
-                                    <h4 class="project-card__title">Vibe App</h4>
-                                    <p class="project-card__tech">UX/UI · Aplicación móvil · FemTech</p>
-                                    <div class="project-card__links">
-                                        <a
-                                            class="project-card__btn"
-                                            href="/assets/Vibe App Memoria.pdf"
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                        >
-                                            Ver proyecto
-                                        </a>
-                                    </div>
-                                </div>
-                            </article>
-
-                            <article class="project-card">
-                                <img
-                                    class="project-card__img"
-                                    src="/assets/images/voluntee.png"
-                                    alt="Voluntee App"
-                                    loading="lazy"
-                                    decoding="async"
-                                />
-                                <div class="project-card__content">
-                                    <h4 class="project-card__title">Voluntee App</h4>
-                                    <p class="project-card__tech">Investigación UX · Diseño de apps</p>
-                                    <div class="project-card__links">
-                                        <a
-                                            class="project-card__btn"
-                                            href="/assets/Voluntee app slides.pdf"
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                        >
-                                            Ver proyecto
-                                        </a>
-                                    </div>
-                                </div>
-                            </article>
-                        </div>
-                    </div>
-
-                    <div class="projects__category">
-                        <div class="projects__category-intro">
-                            <span class="projects__eyebrow">02</span>
-                            <h3 class="projects__category-title">Sitios web que he creado</h3>
-                            <p class="projects__category-description">
-                                Webs desarrolladas con WordPress, Webflow y front-end a medida, pensadas para unir
-                                marca, funcionalidad y detalle visual en una misma experiencia.
-                            </p>
-                        </div>
-
-                        <div class="projects__gallery projects__gallery--editorial">
-                            <article class="project-card project-card--showcase">
-                                <img
-                                    class="project-card__img"
-                                    src="/assets/images/mockupraiz.png"
-                                    alt="Sitio web de Estudio Raíz"
-                                    loading="lazy"
-                                    decoding="async"
-                                />
-                                <div class="project-card__content">
-                                    <h4 class="project-card__title">Estudio Raíz</h4>
-                                    <p class="project-card__tech">Webflow</p>
-                                    <div class="project-card__links">
-                                        <a
-                                            class="project-card__btn"
-                                            href="https://estudio-raiz.webflow.io/"
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                        >
-                                            Ver sitio
-                                        </a>
-                                    </div>
-                                </div>
-                            </article>
-
-                            <article class="project-card">
-                                <img
-                                    class="project-card__img"
-                                    src="/assets/images/mockupisa.png"
-                                    alt="Sitio web de Isabella Mendoza Experiencia Capilar"
-                                    loading="lazy"
-                                    decoding="async"
-                                />
-                                <div class="project-card__content">
-                                    <h4 class="project-card__title">Sitio web Isabella Mendoza Experiencia Capilar</h4>
-                                    <p class="project-card__tech">WordPress</p>
-                                    <div class="project-card__links">
-                                        <a
-                                            class="project-card__btn"
-                                            href="https://proyecto.monicacalle.com/"
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                        >
-                                            Ver sitio
-                                        </a>
-                                    </div>
-                                </div>
-                            </article>
-
-                            <article class="project-card">
-                                <img
-                                    class="project-card__img"
-                                    src="/assets/images/iphone.webp"
-                                    alt="Clon del iPhone 15"
-                                    loading="lazy"
-                                    decoding="async"
-                                />
-                                <div class="project-card__content">
-                                    <h4 class="project-card__title">iPhone 15 Clone</h4>
-                                    <p class="project-card__tech">React · Tailwind · GSAP</p>
-                                    <div class="project-card__links">
-                                        <a
-                                            class="project-card__btn"
-                                            href="https://iphone15-page-clone.vercel.app/"
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                        >
-                                            Ver sitio
-                                        </a>
-                                        <a
-                                            class="project-card__btn project-card__btn--ghost"
-                                            href="https://github.com/monicacalle/iphone15-page-clone"
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                        >
-                                            Código
-                                        </a>
-                                    </div>
-                                </div>
-                            </article>
-
-                        </div>
-                    </div>
-
-                    <div class="projects__category">
-                        <div class="projects__category-intro">
-                            <span class="projects__eyebrow">03</span>
-                            <h3 class="projects__category-title">Proyecto creativo</h3>
-                            <p class="projects__category-description">
-                                Piezas de branding y campañas donde exploro una estética más editorial, expresiva y
-                                conceptual, sin perder claridad ni coherencia visual.
-                            </p>
-                        </div>
-
-                        <div class="projects__gallery projects__gallery--creative">
-                            <article class="project-card project-card--wide project-card--creative-feature">
-                                <img
-                                    class="project-card__img"
-                                    src="/assets/images/portafolioabierto.png"
-                                    alt="Portafolio gráfico de Mónica Calle"
-                                    loading="lazy"
-                                    decoding="async"
-                                />
-                                <div class="project-card__content">
-                                    <h4 class="project-card__title">Portafolio gráfico</h4>
-                                    <p class="project-card__tech">Diseño gráfico · Dirección visual</p>
-                                    <div class="project-card__links">
-                                        <a
-                                            class="project-card__btn"
-                                            href="/assets/portafolio grafico.pdf"
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                        >
-                                            Ver proyecto
-                                        </a>
-                                    </div>
-                                </div>
-                            </article>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section class="curriculum" id="curriculum">
-                <div class="curriculum__wrapper">
-                    <h2 class="curriculum__title">Currículum</h2>
-                    <div class="curriculum__row">
-                        <div class="curriculum__col left">
-                            <h3 class="curriculum__col-title">Formación</h3>
-                            <div class="curriculum__timeline">
-                                <article class="curriculum__item">
-                                    <span class="curriculum__item-dot" aria-hidden="true"></span>
-                                    <span class="curriculum__item-date">Actualmente</span>
-                                    <h4 class="curriculum__item-title">Diseño Web</h4>
-                                    <span class="curriculum__item-place">CEI</span>
-                                    <span class="curriculum__item-country">España</span>
-                                    <p class="curriculum__item-description">
-                                        Actualmente estoy cursando un Máster en Diseño Web en CEI School (Centro de
-                                        Estudios de Innovación), donde profundizo en estrategias avanzadas de diseño
-                                        responsive y en la creación de microinteracciones UX para ofrecer experiencias
-                                        intuitivas, envolventes y atractivas.
-                                    </p>
-                                </article>
-                                <article class="curriculum__item">
-                                    <span class="curriculum__item-dot" aria-hidden="true"></span>
-                                    <span class="curriculum__item-date">2022</span>
-                                    <h4 class="curriculum__item-title">Desarrollo Full Stack</h4>
-                                    <span class="curriculum__item-place">4 Geeks Academy</span>
-                                    <span class="curriculum__item-country">Chile</span>
-                                    <p class="curriculum__item-description">
-                                        Completé un bootcamp inmersivo de Full Stack en 4Geeks Academy, donde reforcé
-                                        el desarrollo front-end con JavaScript (ES6+, React) y la parte back-end con
-                                        Python (Flask, APIs REST), construyendo y desplegando aplicaciones web
-                                        escalables con herramientas y flujos de trabajo estándar de la industria.
-                                    </p>
-                                </article>
-                                <article class="curriculum__item">
-                                    <span class="curriculum__item-dot" aria-hidden="true"></span>
-                                    <span class="curriculum__item-date">2010 - 2015</span>
-                                    <h4 class="curriculum__item-title">Licenciatura en Lenguas Extranjeras</h4>
-                                    <span class="curriculum__item-place">Unidad Central del Valle</span>
-                                    <span class="curriculum__item-country">Colombia</span>
-                                    <p class="curriculum__item-description">
-                                        Obtuve una licenciatura en Lenguas Extranjeras, con enfoque en la enseñanza
-                                        del inglés y el francés, lo que me dio una base sólida en lingüística,
-                                        comunicación intercultural y metodologías pedagógicas que siguen influyendo en
-                                        mi trabajo hoy en día.
-                                    </p>
-                                </article>
-                            </div>
-                        </div>
-
-                        <div class="curriculum__col right">
-                            <h3 class="curriculum__col-title">Experiencia laboral</h3>
-                            <div class="curriculum__timeline">
-                                <article class="curriculum__item">
-                                    <span class="curriculum__item-dot" aria-hidden="true"></span>
-                                    <span class="curriculum__item-date">Actualmente</span>
-                                    <h4 class="curriculum__item-title">Desarrolladora UX/UI y WordPress</h4>
-                                    <span class="curriculum__item-place">Neerutech</span>
-                                    <span class="curriculum__item-country">España</span>
-                                    <p class="curriculum__item-description">
-                                        Como desarrolladora WordPress y UX/UI en Neerutech, me especializo en unir el
-                                        diseño visual con el rendimiento técnico. Lidero procesos de desarrollo de
-                                        principio a fin, transformando ideas complejas de clientes en prototipos de
-                                        alta fidelidad en Figma y tiendas WooCommerce completamente funcionales.
-                                        También he ejecutado migraciones masivas de datos sin tiempo de inactividad y
-                                        mejorado continuamente los flujos de usuario para impulsar interacciones
-                                        intuitivas y el crecimiento del negocio.
-                                    </p>
-                                </article>
-                                <article class="curriculum__item">
-                                    <span class="curriculum__item-dot" aria-hidden="true"></span>
-                                    <span class="curriculum__item-date">2023</span>
-                                    <h4 class="curriculum__item-title">Desarrolladora Front-End</h4>
-                                    <span class="curriculum__item-place">Enerlink</span>
-                                    <span class="curriculum__item-country">Chile</span>
-                                    <p class="curriculum__item-description">
-                                        Como desarrolladora Front-End en Enerlink, participé en la construcción de su
-                                        software de medición inteligente creando un sistema completo de notificaciones
-                                        y preferencias para la aplicación web. Esta funcionalidad permitió a los
-                                        usuarios recibir actualizaciones en tiempo real y personalizar sus preferencias
-                                        directamente desde la interfaz mediante filtros. También trabajé en la
-                                        depuración de código legacy y en la mejora general del sitio corrigiendo
-                                        errores y optimizando el rendimiento.
-                                    </p>
-                                </article>
-                                <article class="curriculum__item">
-                                    <span class="curriculum__item-dot" aria-hidden="true"></span>
-                                    <span class="curriculum__item-date">2022 - 2023</span>
-                                    <h4 class="curriculum__item-title">Asistente de docencia</h4>
-                                    <span class="curriculum__item-place">4 Geeks Academy</span>
-                                    <span class="curriculum__item-country">Chile</span>
-                                    <p class="curriculum__item-description">
-                                        En este rol me enfoqué en acompañar a los estudiantes durante su proceso de
-                                        aprendizaje, con especial énfasis en JavaScript y React. Mi mayor reto fue
-                                        adaptarme a las distintas formas en que cada persona abordaba problemas y
-                                        desarrollaba soluciones. Esta experiencia fortaleció mi capacidad para
-                                        explicar conceptos complejos y adaptar mi forma de enseñar a las necesidades
-                                        individuales de cada estudiante.
-                                    </p>
-                                </article>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section class="contact" id="contact">
-                <div class="contact__wrapper">
-                    <div class="contact__intro">
-                        <span class="contact__eyebrow">Contacto</span>
-                        <h2 class="contact__title">Creemos algo con intención juntos.</h2>
-                        <p class="contact__lead">
-                            Si tienes un proyecto, una colaboración o una oportunidad en mente, me encantará saber de
-                            ti.
-                        </p>
-                        <a class="contact__mail" href="mailto:monicacalle369@gmail.com">monicacalle369@gmail.com</a>
-
-                        <div class="contact__tags">
-                            <span class="contact__tag">Desarrollo Front-End</span>
-                            <span class="contact__tag">Diseño UI</span>
-                            <span class="contact__tag">Dirección creativa</span>
-                        </div>
-                    </div>
-
-                    <form class="contact__form" id="contact-form" action="#" method="post">
-                        <div class="contact__row">
-                            <div class="contact__col">
-                                <div class="contact__box-input">
-                                    <label class="contact__label visually-hidden" for="first-name">Nombre</label>
-                                    <input class="contact__input" id="first-name" type="text" name="first-name" required />
-                                    <span class="contact__span-text">Nombre</span>
-                                    <span class="contact__span-line"></span>
-                                </div>
-                            </div>
-                            <div class="contact__col">
-                                <div class="contact__box-input">
-                                    <label class="contact__label visually-hidden" for="last-name">Apellido</label>
-                                    <input id="last-name" type="text" name="last-name" required class="contact__input" />
-                                    <span class="contact__span-text">Apellido</span>
-                                    <span class="contact__span-line"></span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="contact__row">
-                            <div class="contact__col">
-                                <div class="contact__box-input">
-                                    <label class="contact__label visually-hidden" for="email">Correo electrónico</label>
-                                    <input id="email" type="email" name="email" required class="contact__input" />
-                                    <span class="contact__span-text">Correo electrónico</span>
-                                    <span class="contact__span-line"></span>
-                                </div>
-                            </div>
-                            <div class="contact__col">
-                                <div class="contact__box-input">
-                                    <label class="contact__label visually-hidden" for="mobile">Teléfono</label>
-                                    <input id="mobile" class="contact__input" type="tel" name="telefono" required />
-                                    <span class="contact__span-text">Teléfono</span>
-                                    <span class="contact__span-line"></span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="contact__row">
-                            <div class="contact__col">
-                                <div class="contact__box-input">
-                                    <label class="contact__label visually-hidden" for="message">Mensaje</label>
-                                    <textarea class="textarea" name="message" id="message" cols="30" rows="10" required></textarea>
-                                    <span class="contact__span-text">Escribe tu mensaje aquí...</span>
-                                    <span class="contact__span-line"></span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="contact__row">
-                            <div class="contact__col">
-                                <button class="contact__btn" type="submit" title="Haz clic para enviar tu mensaje">
-                                    Enviar
-                                </button>
-                                <p class="contact__status" id="contact-status" aria-live="polite"></p>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </section>
-        </main>
-
-        <footer class="footer" id="footer">
-            <div class="footer__wrapper">
-                <div class="footer__top">
-                    <div class="footer__brand">
-                        <a href="#home" class="footer__logo" title="Ir al inicio">
-                            <img
-                                class="footer__logo-img"
-                                src="/assets/images/Asset 4.png"
-                                alt="Logo de Mónica Calle"
-                                loading="lazy"
-                                decoding="async"
-                            />
-                        </a>
-                        <p class="footer__text">
-                            Portafolio de Mónica Calle. Diseño UX/UI, diseño gráfico y desarrollo front-end con una
-                            mirada visual, estratégica y cuidada.
-                        </p>
-
-                        <div class="footer__social-icons">
-                            <a
-                                class="footer__social-link"
-                                target="_blank"
-                                rel="noreferrer"
-                                title="Visitar mi perfil de LinkedIn"
-                                href="https://www.linkedin.com/in/monica-calle-betancourt/"
-                                aria-label="LinkedIn"
-                            >
-                                <svg class="footer__icon" title="LinkedIn" xmlns="http://www.w3.org/2000/svg">
-                                    <use href="#icon-linkedin"></use>
-                                </svg>
-                            </a>
-                            <a
-                                class="footer__social-link"
-                                target="_blank"
-                                rel="noreferrer"
-                                title="Visitar mi perfil de GitHub"
-                                href="https://github.com/monicacalle"
-                                aria-label="GitHub"
-                            >
-                                <svg class="footer__icon" title="GitHub" xmlns="http://www.w3.org/2000/svg">
-                                    <use href="#icon-github"></use>
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="footer__nav">
-                        <div class="footer__col">
-                            <h4 class="footer__heading">Explora</h4>
-                            <a class="footer__link" href="#about">Sobre mí</a>
-                            <a class="footer__link" href="#skills">Habilidades</a>
-                            <a class="footer__link" href="#curriculum">Currículum</a>
-                            <a class="footer__link" href="#projects">Proyectos</a>
-                        </div>
-
-                        <div class="footer__col">
-                            <h4 class="footer__heading">Perfil</h4>
-                            <a class="footer__link" href="#contact">Contacto</a>
-                            <a class="footer__link" href="mailto:monicacalle369@gmail.com">Correo</a>
-                            <a
-                                class="footer__link"
-                                href="/assets/curriculum/Monicacalle_cv.pdf"
-                                target="_blank"
-                                rel="noreferrer noopener"
-                            >
-                                Abrir CV
-                            </a>
-                            <a
-                                class="footer__link"
-                                href="/assets/portafolio grafico.pdf"
-                                target="_blank"
-                                rel="noreferrer noopener"
-                            >
-                                Portafolio gráfico
-                            </a>
-                        </div>
-
-                        <div class="footer__col">
-                            <h4 class="footer__heading">Áreas</h4>
-                            <p class="footer__meta">UX/UI Design</p>
-                            <p class="footer__meta">Diseño gráfico</p>
-                            <p class="footer__meta">Front-End</p>
-                            <p class="footer__meta">WordPress</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="footer__bottom">
-                    <p class="footer__note">© 2026 Mónica Calle. Todos los derechos reservados.</p>
-                    <p class="footer__note">Web creada con HTML, CSS y JavaScript.</p>
-                    <div class="footer__legal">
-                        <a class="footer__legal-link" href="#home">Inicio</a>
-                        <a class="footer__legal-link" href="#projects">Proyectos</a>
-                        <a class="footer__legal-link" href="#contact">Contacto</a>
-                    </div>
-                </div>
+    <main>
+      <section class="home" id="home">
+        <div class="home__wrapper">
+          <div class="home__stage">
+            <h1 class="home__title">
+              <span
+                class="home__title-word home__title-word--left"
+                aria-hidden="true"
+              >
+                <span class="home__letter" style="--i: 0">P</span>
+                <span class="home__letter" style="--i: 1">O</span>
+                <span class="home__letter" style="--i: 2">R</span>
+                <span class="home__letter" style="--i: 3">T</span>
+                <span class="home__letter" style="--i: 4">A</span>
+              </span>
+              <span class="visually-hidden">PORTAFOLIO</span>
+              <span
+                class="home__title-word home__title-word--right"
+                aria-hidden="true"
+              >
+                <span class="home__letter" style="--i: 5">F</span>
+                <span class="home__letter" style="--i: 6">O</span>
+                <span class="home__letter" style="--i: 7">L</span>
+                <span class="home__letter" style="--i: 8">I</span>
+                <span class="home__letter" style="--i: 9">O</span>
+              </span>
+            </h1>
+            <div class="home__media">
+              <img
+                class="home__hero-image"
+                src="/assets/profilepicture.png"
+                alt="Foto de perfil para el hero del portafolio"
+                width="832"
+                height="1248"
+                loading="eager"
+                fetchpriority="high"
+                decoding="async"
+              />
             </div>
-        </footer>
+          </div>
+        </div>
+      </section>
 
-        <script src="js/header.js" defer></script>
-        <script src="js/contact.js" defer></script>
-        <script src="js/animations.js" defer></script>
-    </body>
+      <section class="about" id="about">
+        <div class="about__wrapper">
+          <div class="about__grid">
+            <div class="about__content">
+              <div class="about__intro">
+                <h2 class="about__title">SOBRE MÍ</h2>
+              </div>
+
+              <p class="about__subtitle">
+                Hola, mi nombre es
+                <span class="about__subtitle-name">Monica Calle</span>.
+              </p>
+
+              <p class="about__description">
+                Soy diseñadora UX, diseñadora gráfica y profesional con
+                experiencia en Front-End, y combino pensamiento estratégico,
+                sensibilidad visual y conocimiento técnico para crear
+                experiencias digitales que conecten de verdad con las personas.
+                Mi perfil está marcado tanto por el diseño como por el
+                desarrollo, lo que me permite abordar cada proyecto con un
+                equilibrio entre creatividad, estructura y usabilidad. Soy una
+                persona muy visual por naturaleza, y disfruto transformar ideas
+                en interfaces intuitivas, cuidadas y con sentido, que dejen una
+                impresión duradera.
+              </p>
+
+              <div class="about__actions">
+                <a
+                  class="about__btn"
+                  href="/assets/curriculum/Monicacalle_cv.pdf"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                >
+                  Abrir mi CV
+                </a>
+
+                <a
+                  class="about__btn about__btn--ghost"
+                  href="/assets/portafolio grafico.pdf"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                >
+                  Abrir mi portafolio gráfico
+                </a>
+              </div>
+            </div>
+
+            <div class="about__img-container">
+              <img
+                class="about__img"
+                src="/assets/images/A3842F83-2B71-4865-86AB-E1A4CF8BF287.PNG"
+                alt="Foto de perfil"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="skills" id="skills">
+        <div class="skills__contenido">
+          <h2 class="skills__title">Habilidades</h2>
+          <p class="skills__intro">
+            Una selección de las herramientas, plataformas y fortalezas que
+            utilizo para diseñar y construir experiencias digitales con
+            intención.
+          </p>
+          <div class="skills__grid">
+            <article class="skills__card">
+              <span class="skills__eyebrow">Desarrollo</span>
+              <h3 class="skills__col-title">Construcción Front-End</h3>
+              <p class="skills__description">
+                Creación de interfaces responsive con una estructura limpia,
+                maquetación accesible y atención al detalle.
+              </p>
+              <ul class="skills__tags">
+                <li class="skills__tag">HTML5</li>
+                <li class="skills__tag">CSS3</li>
+                <li class="skills__tag">JavaScript</li>
+                <li class="skills__tag">React</li>
+                <li class="skills__tag">Git</li>
+              </ul>
+            </article>
+
+            <article class="skills__card">
+              <span class="skills__eyebrow">Plataformas</span>
+              <h3 class="skills__col-title">CMS y No-Code</h3>
+              <p class="skills__description">
+                Creación y mantenimiento de sitios web cuidados, con sistemas de
+                contenido flexibles y flujos visuales eficientes.
+              </p>
+              <ul class="skills__tags">
+                <li class="skills__tag">WordPress</li>
+                <li class="skills__tag">Webflow</li>
+                <li class="skills__tag">Edición de contenido</li>
+                <li class="skills__tag">Sistemas de diseño</li>
+              </ul>
+            </article>
+
+            <article class="skills__card">
+              <span class="skills__eyebrow">Diseño</span>
+              <h3 class="skills__col-title">Diseño UI y visual</h3>
+              <p class="skills__description">
+                Transformación de ideas en direcciones visuales claras,
+                wireframes, prototipos y recursos de interfaz alineados con la
+                marca.
+              </p>
+              <ul class="skills__tags">
+                <li class="skills__tag">Figma</li>
+                <li class="skills__tag">Adobe Illustrator</li>
+                <li class="skills__tag">Photoshop</li>
+                <li class="skills__tag">InDesign</li>
+              </ul>
+            </article>
+
+            <article class="skills__card">
+              <span class="skills__eyebrow">Colaboración</span>
+              <h3 class="skills__col-title">Fortalezas profesionales</h3>
+              <p class="skills__description">
+                Trabajo con equipos y clientes a través de una comunicación
+                clara, resolución de problemas, adaptabilidad y una mentalidad
+                centrada en el usuario.
+              </p>
+              <ul class="skills__tags">
+                <li class="skills__tag">Comunicación</li>
+                <li class="skills__tag">Trabajo en equipo</li>
+                <li class="skills__tag">Resolución de problemas</li>
+                <li class="skills__tag">Adaptabilidad</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="projects" id="projects">
+        <div class="projects__wrapper">
+          <h2 class="projects__title">Proyectos en los que he trabajado</h2>
+
+          <div class="projects__category">
+            <div class="projects__category-intro">
+              <span class="projects__eyebrow">01</span>
+              <h3 class="projects__category-title">Proyectos UX/UI</h3>
+              <p class="projects__category-description">
+                Aplicaciones y conceptos digitales donde combino investigación,
+                estructura y una dirección visual cuidada para construir
+                experiencias claras y memorables.
+              </p>
+            </div>
+
+            <div class="projects__gallery projects__gallery--duo">
+              <article class="project-card">
+                <img
+                  class="project-card__img"
+                  src="/assets/images/vibe.png"
+                  alt="Vibe App"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <div class="project-card__content">
+                  <h4 class="project-card__title">Vibe App</h4>
+                  <p class="project-card__tech">
+                    UX/UI · Aplicación móvil · FemTech
+                  </p>
+                  <div class="project-card__links">
+                    <a
+                      class="project-card__btn"
+                      href="/assets/Vibe App Memoria.pdf"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Ver proyecto
+                    </a>
+                  </div>
+                </div>
+              </article>
+
+              <article class="project-card">
+                <img
+                  class="project-card__img"
+                  src="/assets/images/voluntee.png"
+                  alt="Voluntee App"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <div class="project-card__content">
+                  <h4 class="project-card__title">Voluntee App</h4>
+                  <p class="project-card__tech">
+                    Investigación UX · Diseño de apps
+                  </p>
+                  <div class="project-card__links">
+                    <a
+                      class="project-card__btn"
+                      href="/assets/Voluntee app slides.pdf"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Ver proyecto
+                    </a>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <div class="projects__category">
+            <div class="projects__category-intro">
+              <span class="projects__eyebrow">02</span>
+              <h3 class="projects__category-title">Sitios web que he creado</h3>
+              <p class="projects__category-description">
+                Webs desarrolladas con WordPress, Webflow y front-end a medida,
+                pensadas para unir marca, funcionalidad y detalle visual en una
+                misma experiencia.
+              </p>
+            </div>
+
+            <div class="projects__gallery projects__gallery--editorial">
+              <article class="project-card project-card--showcase">
+                <img
+                  class="project-card__img"
+                  src="/assets/images/mockupraiz.png"
+                  alt="Sitio web de Estudio Raíz"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <div class="project-card__content">
+                  <h4 class="project-card__title">Estudio Raíz</h4>
+                  <p class="project-card__tech">Webflow</p>
+                  <div class="project-card__links">
+                    <a
+                      class="project-card__btn"
+                      href="https://estudio-raiz.webflow.io/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Ver sitio
+                    </a>
+                  </div>
+                </div>
+              </article>
+
+              <article class="project-card">
+                <img
+                  class="project-card__img"
+                  src="/assets/images/mockupisa.png"
+                  alt="Sitio web de Isabella Mendoza Experiencia Capilar"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <div class="project-card__content">
+                  <h4 class="project-card__title">
+                    Sitio web Isabella Mendoza Experiencia Capilar
+                  </h4>
+                  <p class="project-card__tech">WordPress</p>
+                  <div class="project-card__links">
+                    <a
+                      class="project-card__btn"
+                      href="https://monicacalle.es/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Ver sitio
+                    </a>
+                  </div>
+                </div>
+              </article>
+
+              <article class="project-card">
+                <img
+                  class="project-card__img"
+                  src="/assets/images/iphone.webp"
+                  alt="Clon del iPhone 15"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <div class="project-card__content">
+                  <h4 class="project-card__title">iPhone 15 Clone</h4>
+                  <p class="project-card__tech">React · Tailwind · GSAP</p>
+                  <div class="project-card__links">
+                    <a
+                      class="project-card__btn"
+                      href="https://iphone15-page-clone.vercel.app/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Ver sitio
+                    </a>
+                    <a
+                      class="project-card__btn project-card__btn--ghost"
+                      href="https://github.com/monicacalle/iphone15-page-clone"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Código
+                    </a>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <div class="projects__category">
+            <div class="projects__category-intro">
+              <span class="projects__eyebrow">03</span>
+              <h3 class="projects__category-title">Proyecto creativo</h3>
+              <p class="projects__category-description">
+                Piezas de branding y campañas donde exploro una estética más
+                editorial, expresiva y conceptual, sin perder claridad ni
+                coherencia visual.
+              </p>
+            </div>
+
+            <div class="projects__gallery projects__gallery--creative">
+              <article
+                class="project-card project-card--wide project-card--creative-feature"
+              >
+                <img
+                  class="project-card__img"
+                  src="/assets/images/portafolioabierto.png"
+                  alt="Portafolio gráfico de Mónica Calle"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <div class="project-card__content">
+                  <h4 class="project-card__title">Portafolio gráfico</h4>
+                  <p class="project-card__tech">
+                    Diseño gráfico · Dirección visual
+                  </p>
+                  <div class="project-card__links">
+                    <a
+                      class="project-card__btn"
+                      href="/assets/portafolio grafico.pdf"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Ver proyecto
+                    </a>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="curriculum" id="curriculum">
+        <div class="curriculum__wrapper">
+          <h2 class="curriculum__title">Currículum</h2>
+          <div class="curriculum__row">
+            <div class="curriculum__col left">
+              <h3 class="curriculum__col-title">Formación</h3>
+              <div class="curriculum__timeline">
+                <article class="curriculum__item">
+                  <span class="curriculum__item-dot" aria-hidden="true"></span>
+                  <span class="curriculum__item-date">Actualmente</span>
+                  <h4 class="curriculum__item-title">Diseño Web</h4>
+                  <span class="curriculum__item-place">CEI</span>
+                  <span class="curriculum__item-country">España</span>
+                  <p class="curriculum__item-description">
+                    Actualmente estoy cursando un Máster en Diseño Web en CEI
+                    School (Centro de Estudios de Innovación), donde profundizo
+                    en estrategias avanzadas de diseño responsive y en la
+                    creación de microinteracciones UX para ofrecer experiencias
+                    intuitivas, envolventes y atractivas.
+                  </p>
+                </article>
+                <article class="curriculum__item">
+                  <span class="curriculum__item-dot" aria-hidden="true"></span>
+                  <span class="curriculum__item-date">2022</span>
+                  <h4 class="curriculum__item-title">Desarrollo Full Stack</h4>
+                  <span class="curriculum__item-place">4 Geeks Academy</span>
+                  <span class="curriculum__item-country">Chile</span>
+                  <p class="curriculum__item-description">
+                    Completé un bootcamp inmersivo de Full Stack en 4Geeks
+                    Academy, donde reforcé el desarrollo front-end con
+                    JavaScript (ES6+, React) y la parte back-end con Python
+                    (Flask, APIs REST), construyendo y desplegando aplicaciones
+                    web escalables con herramientas y flujos de trabajo estándar
+                    de la industria.
+                  </p>
+                </article>
+                <article class="curriculum__item">
+                  <span class="curriculum__item-dot" aria-hidden="true"></span>
+                  <span class="curriculum__item-date">2010 - 2015</span>
+                  <h4 class="curriculum__item-title">
+                    Licenciatura en Lenguas Extranjeras
+                  </h4>
+                  <span class="curriculum__item-place"
+                    >Unidad Central del Valle</span
+                  >
+                  <span class="curriculum__item-country">Colombia</span>
+                  <p class="curriculum__item-description">
+                    Obtuve una licenciatura en Lenguas Extranjeras, con enfoque
+                    en la enseñanza del inglés y el francés, lo que me dio una
+                    base sólida en lingüística, comunicación intercultural y
+                    metodologías pedagógicas que siguen influyendo en mi trabajo
+                    hoy en día.
+                  </p>
+                </article>
+              </div>
+            </div>
+
+            <div class="curriculum__col right">
+              <h3 class="curriculum__col-title">Experiencia laboral</h3>
+              <div class="curriculum__timeline">
+                <article class="curriculum__item">
+                  <span class="curriculum__item-dot" aria-hidden="true"></span>
+                  <span class="curriculum__item-date">Actualmente</span>
+                  <h4 class="curriculum__item-title">
+                    Desarrolladora UX/UI y WordPress
+                  </h4>
+                  <span class="curriculum__item-place">Neerutech</span>
+                  <span class="curriculum__item-country">España</span>
+                  <p class="curriculum__item-description">
+                    Como desarrolladora WordPress y UX/UI en Neerutech, me
+                    especializo en unir el diseño visual con el rendimiento
+                    técnico. Lidero procesos de desarrollo de principio a fin,
+                    transformando ideas complejas de clientes en prototipos de
+                    alta fidelidad en Figma y tiendas WooCommerce completamente
+                    funcionales. También he ejecutado migraciones masivas de
+                    datos sin tiempo de inactividad y mejorado continuamente los
+                    flujos de usuario para impulsar interacciones intuitivas y
+                    el crecimiento del negocio.
+                  </p>
+                </article>
+                <article class="curriculum__item">
+                  <span class="curriculum__item-dot" aria-hidden="true"></span>
+                  <span class="curriculum__item-date">2023</span>
+                  <h4 class="curriculum__item-title">
+                    Desarrolladora Front-End
+                  </h4>
+                  <span class="curriculum__item-place">Enerlink</span>
+                  <span class="curriculum__item-country">Chile</span>
+                  <p class="curriculum__item-description">
+                    Como desarrolladora Front-End en Enerlink, participé en la
+                    construcción de su software de medición inteligente creando
+                    un sistema completo de notificaciones y preferencias para la
+                    aplicación web. Esta funcionalidad permitió a los usuarios
+                    recibir actualizaciones en tiempo real y personalizar sus
+                    preferencias directamente desde la interfaz mediante
+                    filtros. También trabajé en la depuración de código legacy y
+                    en la mejora general del sitio corrigiendo errores y
+                    optimizando el rendimiento.
+                  </p>
+                </article>
+                <article class="curriculum__item">
+                  <span class="curriculum__item-dot" aria-hidden="true"></span>
+                  <span class="curriculum__item-date">2022 - 2023</span>
+                  <h4 class="curriculum__item-title">Asistente de docencia</h4>
+                  <span class="curriculum__item-place">4 Geeks Academy</span>
+                  <span class="curriculum__item-country">Chile</span>
+                  <p class="curriculum__item-description">
+                    En este rol me enfoqué en acompañar a los estudiantes
+                    durante su proceso de aprendizaje, con especial énfasis en
+                    JavaScript y React. Mi mayor reto fue adaptarme a las
+                    distintas formas en que cada persona abordaba problemas y
+                    desarrollaba soluciones. Esta experiencia fortaleció mi
+                    capacidad para explicar conceptos complejos y adaptar mi
+                    forma de enseñar a las necesidades individuales de cada
+                    estudiante.
+                  </p>
+                </article>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact" id="contact">
+        <div class="contact__wrapper">
+          <div class="contact__intro">
+            <span class="contact__eyebrow">Contacto</span>
+            <h2 class="contact__title">Creemos algo con intención juntos.</h2>
+            <p class="contact__lead">
+              Si tienes un proyecto, una colaboración o una oportunidad en
+              mente, me encantará saber de ti.
+            </p>
+            <a class="contact__mail" href="mailto:monicacalle369@gmail.com"
+              >monicacalle369@gmail.com</a
+            >
+
+            <div class="contact__tags">
+              <span class="contact__tag">Desarrollo Front-End</span>
+              <span class="contact__tag">Diseño UI</span>
+              <span class="contact__tag">Dirección creativa</span>
+            </div>
+          </div>
+
+          <form
+            class="contact__form"
+            id="contact-form"
+            action="#"
+            method="post"
+          >
+            <div class="contact__row">
+              <div class="contact__col">
+                <div class="contact__box-input">
+                  <label class="contact__label visually-hidden" for="first-name"
+                    >Nombre</label
+                  >
+                  <input
+                    class="contact__input"
+                    id="first-name"
+                    type="text"
+                    name="first-name"
+                    required
+                  />
+                  <span class="contact__span-text">Nombre</span>
+                  <span class="contact__span-line"></span>
+                </div>
+              </div>
+              <div class="contact__col">
+                <div class="contact__box-input">
+                  <label class="contact__label visually-hidden" for="last-name"
+                    >Apellido</label
+                  >
+                  <input
+                    id="last-name"
+                    type="text"
+                    name="last-name"
+                    required
+                    class="contact__input"
+                  />
+                  <span class="contact__span-text">Apellido</span>
+                  <span class="contact__span-line"></span>
+                </div>
+              </div>
+            </div>
+            <div class="contact__row">
+              <div class="contact__col">
+                <div class="contact__box-input">
+                  <label class="contact__label visually-hidden" for="email"
+                    >Correo electrónico</label
+                  >
+                  <input
+                    id="email"
+                    type="email"
+                    name="email"
+                    required
+                    class="contact__input"
+                  />
+                  <span class="contact__span-text">Correo electrónico</span>
+                  <span class="contact__span-line"></span>
+                </div>
+              </div>
+              <div class="contact__col">
+                <div class="contact__box-input">
+                  <label class="contact__label visually-hidden" for="mobile"
+                    >Teléfono</label
+                  >
+                  <input
+                    id="mobile"
+                    class="contact__input"
+                    type="tel"
+                    name="telefono"
+                    required
+                  />
+                  <span class="contact__span-text">Teléfono</span>
+                  <span class="contact__span-line"></span>
+                </div>
+              </div>
+            </div>
+            <div class="contact__row">
+              <div class="contact__col">
+                <div class="contact__box-input">
+                  <label class="contact__label visually-hidden" for="message"
+                    >Mensaje</label
+                  >
+                  <textarea
+                    class="textarea"
+                    name="message"
+                    id="message"
+                    cols="30"
+                    rows="10"
+                    required
+                  ></textarea>
+                  <span class="contact__span-text"
+                    >Escribe tu mensaje aquí...</span
+                  >
+                  <span class="contact__span-line"></span>
+                </div>
+              </div>
+            </div>
+            <div class="contact__row">
+              <div class="contact__col">
+                <button
+                  class="contact__btn"
+                  type="submit"
+                  title="Haz clic para enviar tu mensaje"
+                >
+                  Enviar
+                </button>
+                <p
+                  class="contact__status"
+                  id="contact-status"
+                  aria-live="polite"
+                ></p>
+              </div>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer" id="footer">
+      <div class="footer__wrapper">
+        <div class="footer__top">
+          <div class="footer__brand">
+            <a href="#home" class="footer__logo" title="Ir al inicio">
+              <img
+                class="footer__logo-img"
+                src="/assets/images/Asset 4.png"
+                alt="Logo de Mónica Calle"
+                loading="lazy"
+                decoding="async"
+              />
+            </a>
+            <p class="footer__text">
+              Portafolio de Mónica Calle. Diseño UX/UI, diseño gráfico y
+              desarrollo front-end con una mirada visual, estratégica y cuidada.
+            </p>
+
+            <div class="footer__social-icons">
+              <a
+                class="footer__social-link"
+                target="_blank"
+                rel="noreferrer"
+                title="Visitar mi perfil de LinkedIn"
+                href="https://www.linkedin.com/in/monica-calle-betancourt/"
+                aria-label="LinkedIn"
+              >
+                <svg
+                  class="footer__icon"
+                  title="LinkedIn"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <use href="#icon-linkedin"></use>
+                </svg>
+              </a>
+              <a
+                class="footer__social-link"
+                target="_blank"
+                rel="noreferrer"
+                title="Visitar mi perfil de GitHub"
+                href="https://github.com/monicacalle"
+                aria-label="GitHub"
+              >
+                <svg
+                  class="footer__icon"
+                  title="GitHub"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <use href="#icon-github"></use>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="footer__nav">
+            <div class="footer__col">
+              <h4 class="footer__heading">Explora</h4>
+              <a class="footer__link" href="#about">Sobre mí</a>
+              <a class="footer__link" href="#skills">Habilidades</a>
+              <a class="footer__link" href="#curriculum">Currículum</a>
+              <a class="footer__link" href="#projects">Proyectos</a>
+            </div>
+
+            <div class="footer__col">
+              <h4 class="footer__heading">Perfil</h4>
+              <a class="footer__link" href="#contact">Contacto</a>
+              <a class="footer__link" href="mailto:monicacalle369@gmail.com"
+                >Correo</a
+              >
+              <a
+                class="footer__link"
+                href="/assets/curriculum/Monicacalle_cv.pdf"
+                target="_blank"
+                rel="noreferrer noopener"
+              >
+                Abrir CV
+              </a>
+              <a
+                class="footer__link"
+                href="/assets/portafolio grafico.pdf"
+                target="_blank"
+                rel="noreferrer noopener"
+              >
+                Portafolio gráfico
+              </a>
+            </div>
+
+            <div class="footer__col">
+              <h4 class="footer__heading">Áreas</h4>
+              <p class="footer__meta">UX/UI Design</p>
+              <p class="footer__meta">Diseño gráfico</p>
+              <p class="footer__meta">Front-End</p>
+              <p class="footer__meta">WordPress</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer__bottom">
+          <p class="footer__note">
+            © 2026 Mónica Calle. Todos los derechos reservados.
+          </p>
+          <p class="footer__note">Web creada con HTML, CSS y JavaScript.</p>
+          <div class="footer__legal">
+            <a class="footer__legal-link" href="#home">Inicio</a>
+            <a class="footer__legal-link" href="#projects">Proyectos</a>
+            <a class="footer__legal-link" href="#contact">Contacto</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/header.js" defer></script>
+    <script src="js/contact.js" defer></script>
+    <script src="js/animations.js" defer></script>
+  </body>
 </html>
