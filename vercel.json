@@ -2,9 +2,9 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "redirects": [
     {
-      "source": "/:path*",
+      "source": "/(.*)",
       "destination": "https://monicacalle.es",
-      "permanent": true
+      "permanent": false
     }
   ]
 }
